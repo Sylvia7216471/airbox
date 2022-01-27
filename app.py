@@ -18,7 +18,7 @@ from linebot.exceptions import (
 )
 from linebot.models import *
 
-app = Flask(__name__)
+app = Flask(name)
 
 # 必須放上自己的Channel Access Token
 line_bot_api = LineBotApi('0ZtGtrSOwbENt1n2Z0cehZ610JCO8aaojjiqtyOJlpt1/M85m3UpKTWiEpfmx+2vhLTgSLwnFe8DRpUQBsWjTWNUhG5O9KnlAbF7IIYWbPYKh+CLZ9E0c9H4FG0bCfGdpcbajZ42KRQgmexjrNbQzQdB04t89/1O/w1cDnyilFU=')
