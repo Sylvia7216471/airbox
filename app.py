@@ -6,8 +6,8 @@ Created on Wed Jun  2 21:16:35 2021
 版權屬於「行銷搬進大程式」所有，若有疑問，可聯絡ivanyang0606@gmail.com
 
 Line Bot聊天機器人
-第三章 互動回傳功能
-傳送圖片ImageSendMessage
+第四章 選單功能
+多樣版組合按鈕CarouselTemplate
 """
 #載入LineBot所需要的套件
 from flask import Flask, request, abort
@@ -52,12 +52,60 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     message = text=event.message.text
-    if re.match('告訴我秘密',message):
-        image_message = ImageSendMessage(
-            original_content_url='https://images.builderservices.io/s/cdn/v1.0/i/m?url=https%3A%2F%2Fstorage.googleapis.com%2Fproduction-bluehost-v1-0-9%2F659%2F790659%2FAtmP8Pmy%2F9c8c1e647eb14e01898043c0c60bf03a&methods=resize%2C1000%2C5000',
-            preview_image_url='https://images.builderservices.io/s/cdn/v1.0/i/m?url=https%3A%2F%2Fstorage.googleapis.com%2Fproduction-bluehost-v1-0-9%2F659%2F790659%2FAtmP8Pmy%2Ffd2258c5ea6c43f591e8d9930d152b94&methods=resize%2C1000%2C5000'
+    if re.match('我想選擇裝置',message):
+        carousel_template_message = TemplateSendMessage(
+            alt_text='多樣版組合按鈕',
+            template=CarouselTemplate(
+                columns=[
+                    CarouselColumn(
+                        thumbnail_image_url='https://i.imgur.com/wpM584d.jpg',
+                        title='裝置1',
+                        text='請點選你想查看的資訊',
+                        actions=[
+                            MessageAction(
+                                label='環境資料',
+                                text='裝置1\n 更新時間:\n 溫度:\n 濕度:\n 懸浮粒子(ug/m3)\n PM1:\n PM2.5:\n PM10:\n 氣體感測\n MQ3:(ug/L)\n MQ7:(ppm)\n MQ135:(ppm)\n '
+                            ),
+                            URIAction(
+                                label='環境影像',
+                                uri='https://marketingliveincode.com/?page_id=270'
+                            )
+                        ]
+                    ),
+                    CarouselColumn(
+                        thumbnail_image_url='https://i.imgur.com/W7nI6fg.jpg',
+                        title='裝置2',
+                        text='請點選你想查看的資訊',
+                        actions=[
+                            MessageAction(
+                                label='環境資料',
+                                text='裝置2\n 更新時間:\n 溫度:\n 濕度:\n 懸浮粒子(ug/m3)\n PM1:\n PM2.5:\n PM10:\n 氣體感測\n MQ3:(ug/L)\n MQ7:(ppm)\n MQ135:(ppm)\n '
+                            ),
+                            URIAction(
+                                label='環境影像',
+                                uri='https://marketingliveincode.com/?page_id=2532'
+                            )
+                        ]
+                    ),
+                    CarouselColumn(
+                        thumbnail_image_url='https://i.imgur.com/l7rzfIK.jpg',
+                        title='裝置3',
+                        text='請點選你想查看的資訊',
+                        actions=[
+                            MessageAction(
+                                label='教學內容',
+                                text='裝置3\n 更新時間:\n 溫度:\n 濕度:\n 懸浮粒子(ug/m3)\n PM1:\n PM2.5:\n PM10:\n 氣體感測\n MQ3:(ug/L)\n MQ7:(ppm)\n MQ135:(ppm)\n '
+                            ),
+                            URIAction(
+                                label='環境影像',
+                                uri='https://marketingliveincode.com/?page_id=2648'
+                            )
+                        ]
+                    )
+                ]
+            )
         )
-        line_bot_api.reply_message(event.reply_token, image_message)
+        line_bot_api.reply_message(event.reply_token, carousel_template_message)
     else:
         line_bot_api.reply_message(event.reply_token, TextSendMessage(message))
 #主程式
