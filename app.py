@@ -38,7 +38,7 @@ def callback():
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
     message = text = event.message.text
-    if re.match('告訴我秘密',message):
+    if re.match('我想選擇裝置',message):
         carousel_template_message = TemplateSendMessage(alt_text='多樣版組合按鈕',
              template=CarouselTemplate(columns=[CarouselColumn(thumbnail_image_url='https://i.imgur.com/wpM584d.jpg',
                          title='裝置1',
