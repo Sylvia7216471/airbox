@@ -48,7 +48,7 @@ def handle_message(event):
                              MessageAction(label='裝置位置',
                                  text=''),
                              URIAction(label='環境影像',
-                                 uri='https://marketingliveincode.com/?page_id=2532')]),
+                                 uri='')]),
                      CarouselColumn(thumbnail_image_url='https://i.imgur.com/W7nI6fg.jpg',
                          title='裝置2',
                          text='請選擇你想查看的資訊',
@@ -57,7 +57,7 @@ def handle_message(event):
                              MessageAction(label='裝置位置',
                                  text=''),
                              URIAction(label='環境影像',
-                                 uri='https://marketingliveincode.com/?page_id=2532')]),
+                                 uri='')]),
                      CarouselColumn(thumbnail_image_url='https://i.imgur.com/l7rzfIK.jpg',
                          title='裝置3',
                          text='請選擇你想查看的資訊',
@@ -66,7 +66,7 @@ def handle_message(event):
                              MessageAction(label='裝置位置',
                                  text=''),
                              URIAction(label='環境影像',
-                                 uri='https://marketingliveincode.com/?page_id=2532')]),
+                                 uri='')]),
                      CarouselColumn(thumbnail_image_url='https://i.imgur.com/l7rzfIK.jpg',
                          title='裝置4',
                          text='請選擇你想查看的資訊',
@@ -75,7 +75,7 @@ def handle_message(event):
                              MessageAction(label='裝置位置',
                                  text=''),
                              URIAction(label='環境影像',
-                                 uri='https://marketingliveincode.com/?page_id=2532')]),
+                                 uri='')]),
                      CarouselColumn(thumbnail_image_url='https://i.imgur.com/l7rzfIK.jpg',
                          title='裝置5',
                          text='請選擇你想查看的資訊',
@@ -84,7 +84,7 @@ def handle_message(event):
                              MessageAction(label='裝置位置',
                                  text=''),
                              URIAction(label='環境影像',
-                                 uri='https://marketingliveincode.com/?page_id=2532')])]))
+                                 uri='')])]))
         line_bot_api.reply_message(event.reply_token, carousel_template_message)
     else:
         line_bot_api.reply_message(event.reply_token, TextSendMessage(message))
