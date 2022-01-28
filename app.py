@@ -60,7 +60,7 @@ def handle_message(event):
             template=CarouselTemplate(
                 columns=[
                     CarouselColumn(
-                        thumbnail_image_url='https://i.imgur.com/wpM584d.jpg',
+                        thumbnail_image_url='https://cdn-icons-png.flaticon.com/512/4516/4516764.png',
                         title='裝置1',
                         text='請點選你想查看的資訊',
                         actions=[
@@ -161,7 +161,7 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, carousel_template_message)
     elif re.match('環境資料',message):
         line_bot_api.push_message(yourID, 
-                          TextSendMessage(text='裝置3\n更新時間:\n溫度:\n濕度:\n懸浮粒子(ug/m3)\nPM1:\nPM2.5:\nPM10:\n氣體感測\nMQ3:(ug/L)\nMQ7:(ppm)\nMQ135:(ppm)'))
+                          TextSendMessage(text='更新時間:\n溫度:\n濕度:\n懸浮粒子(ug/m3)\nPM1:\nPM2.5:\nPM10:\n氣體感測\nMQ3:(ug/L)\nMQ7:(ppm)\nMQ135:(ppm)'))
 #主程式
 import os
 if __name__ == "__main__":
