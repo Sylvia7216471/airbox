@@ -159,31 +159,6 @@ def handle_message(event):
         )
         
         line_bot_api.reply_message(event.reply_token, carousel_template_message)
-    elif event.message.text == "環境資料":       
-        buttons_template = TemplateSendMessage(
-        alt_text='選擇環境資料',
-        template=ButtonsTemplate(
-            title='這是ButtonsTemplate',
-            text='ButtonsTemplate可以傳送text,uri',
-            thumbnail_image_url='圖片網址',
-            actions=[
-                MessageTemplateAction(
-                    label='ButtonsTemplate',
-                    text='ButtonsTemplate'
-                ),
-                URITemplateAction(
-                    label='VIDEO1',
-                    uri='影片網址'
-                ),
-                PostbackTemplateAction(
-                label='postback',
-                text='postback text',
-                data='postback1'
-                )
-            ]
-        )
-    )
-        line_bot_api.reply_message(event.reply_token, buttons_template)
     elif re.match('環境資料',message):
         line_bot_api.push_message(yourID, 
                           TextSendMessage(text='裝置3\n更新時間:\n溫度:\n濕度:\n懸浮粒子(ug/m3)\nPM1:\nPM2.5:\nPM10:\n氣體感測\nMQ3:(ug/L)\nMQ7:(ppm)\nMQ135:(ppm)'))
