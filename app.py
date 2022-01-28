@@ -142,13 +142,14 @@ def handle_message(event):
                 ]
             )
         )
+        
+        line_bot_api.reply_message(event.reply_token, carousel_template_message)
+    elif re.search('環境資料',message):
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(message))
+    else:
         line_bot_api.push_message(yourID, 
                           TextSendMessage(text='裝置3\n更新時間:\n溫度:\n濕度:\n懸浮粒子(ug/m3)\nPM1:\nPM2.5:\nPM10:\n氣體感測\nMQ3:(ug/L)\nMQ7:(ppm)\nMQ135:(ppm)'))
         
-    elif re.match('環境資料',message):
-        line_bot_api.reply_message(event.reply_token, carousel_template_message)
-    else:
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(message))
 #主程式
 import os
 if __name__ == "__main__":
