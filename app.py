@@ -64,7 +64,7 @@ def handle_message(event):
                         actions=[
                             MessageAction(
                                 label='環境資料',
-                                text='裝置1\n 更新時間:\n 溫度:\n 濕度:\n 懸浮粒子(ug/m3)\n PM1:\n PM2.5:\n PM10:\n 氣體感測\n MQ3:(ug/L)\n MQ7:(ppm)\n MQ135:(ppm)\n '
+                                text='裝置1\n更新時間:\n溫度:\n濕度:\n懸浮粒子(ug/m3)\nPM1:\nPM2.5:\nPM10:\n氣體感測\nMQ3:(ug/L)\nMQ7:(ppm)\nMQ135:(ppm) '
                             ),
                             URIAction(
                                 label='環境影像',
@@ -79,7 +79,7 @@ def handle_message(event):
                         actions=[
                             MessageAction(
                                 label='環境資料',
-                                text='裝置2\n 更新時間:\n 溫度:\n 濕度:\n 懸浮粒子(ug/m3)\n PM1:\n PM2.5:\n PM10:\n 氣體感測\n MQ3:(ug/L)\n MQ7:(ppm)\n MQ135:(ppm)\n '
+                                text='裝置2\n更新時間:\n溫度:\n濕度:\n懸浮粒子(ug/m3)\nPM1:\nPM2.5:\nPM10:\n氣體感測\nMQ3:(ug/L)\nMQ7:(ppm)\nMQ135:(ppm) '
                             ),
                             URIAction(
                                 label='環境影像',
@@ -87,14 +87,44 @@ def handle_message(event):
                             )
                         ]
                     ),
-                    CarouselColumn(
-                        thumbnail_image_url='https://i.imgur.com/l7rzfIK.jpg',
+                     CarouselColumn(
+                        thumbnail_image_url='https://i.imgur.com/wpM584d.jpg',
                         title='裝置3',
                         text='請點選你想查看的資訊',
                         actions=[
                             MessageAction(
+                                label='環境資料',
+                                text='裝置3\n更新時間:\n溫度:\n濕度:\n懸浮粒子(ug/m3)\nPM1:\nPM2.5:\nPM10:\n氣體感測\nMQ3:(ug/L)\nMQ7:(ppm)\nMQ135:(ppm) '
+                            ),
+                            URIAction(
+                                label='環境影像',
+                                uri='https://marketingliveincode.com/?page_id=270'
+                            )
+                        ]
+                    ),
+                     CarouselColumn(
+                        thumbnail_image_url='https://i.imgur.com/wpM584d.jpg',
+                        title='裝置4',
+                        text='請點選你想查看的資訊',
+                        actions=[
+                            MessageAction(
+                                label='環境資料',
+                                text='裝置4\n更新時間:\n溫度:\n濕度:\n懸浮粒子(ug/m3)\nPM1:\nPM2.5:\nPM10:\n氣體感測\nMQ3:(ug/L)\nMQ7:(ppm)\nMQ135:(ppm) '
+                            ),
+                            URIAction(
+                                label='環境影像',
+                                uri='https://marketingliveincode.com/?page_id=270'
+                            )
+                        ]
+                    ),
+                    CarouselColumn(
+                        thumbnail_image_url='https://i.imgur.com/l7rzfIK.jpg',
+                        title='裝置5',
+                        text='請點選你想查看的資訊',
+                        actions=[
+                            MessageAction(
                                 label='教學內容',
-                                text='裝置3\n 更新時間:\n 溫度:\n 濕度:\n 懸浮粒子(ug/m3)\n PM1:\n PM2.5:\n PM10:\n 氣體感測\n MQ3:(ug/L)\n MQ7:(ppm)\n MQ135:(ppm)\n '
+                                text='裝置5\n更新時間:\n溫度:\n濕度:\n懸浮粒子(ug/m3)\nPM1:\nPM2.5:\nPM10:\n氣體感測\nMQ3:(ug/L)\nMQ7:(ppm)\nMQ135:(ppm) '
                             ),
                             URIAction(
                                 label='環境影像',
