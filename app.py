@@ -60,7 +60,7 @@ def handle_message(event):
             template=CarouselTemplate(
                 columns=[
                     CarouselColumn(
-                        thumbnail_image_url='https://cdn-icons-png.flaticon.com/512/4516/4516764.png',
+                        thumbnail_image_url='https://cdn-icons-png.flaticon.com/512/1875/1875043.png',
                         title='裝置1',
                         text='請點選你想查看的資訊',
                         actions=[
@@ -79,7 +79,7 @@ def handle_message(event):
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url='https://i.imgur.com/W7nI6fg.jpg',
+                        thumbnail_image_url='https://cdn-icons-png.flaticon.com/512/1874/1874965.png',
                         title='裝置2',
                         text='請點選你想查看的資訊',
                         actions=[
@@ -98,7 +98,7 @@ def handle_message(event):
                         ]
                     ),
                      CarouselColumn(
-                        thumbnail_image_url='https://i.imgur.com/wpM584d.jpg',
+                        thumbnail_image_url='https://cdn-icons-png.flaticon.com/512/1875/1875078.png',
                         title='裝置3',
                         text='請點選你想查看的資訊',
                         actions=[
@@ -117,7 +117,7 @@ def handle_message(event):
                         ]
                     ),
                      CarouselColumn(
-                        thumbnail_image_url='https://i.imgur.com/wpM584d.jpg',
+                        thumbnail_image_url='https://cdn-icons-png.flaticon.com/512/1874/1874996.png',
                         title='裝置4',
                         text='請點選你想查看的資訊',
                         actions=[
@@ -136,7 +136,7 @@ def handle_message(event):
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url='https://i.imgur.com/l7rzfIK.jpg',
+                        thumbnail_image_url='https://cdn-icons-png.flaticon.com/512/1875/1875006.png',
                         title='裝置5',
                         text='請點選你想查看的資訊',
                         actions=[
@@ -161,7 +161,7 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, carousel_template_message)
     elif re.match('環境資料',message):
         line_bot_api.push_message(yourID, 
-                          TextSendMessage(text='更新時間:\n溫度:\n濕度:\n懸浮粒子(ug/m3)\nPM1:\nPM2.5:\nPM10:\n氣體感測\nMQ3:(ug/L)\nMQ7:(ppm)\nMQ135:(ppm)'))
+                          TextSendMessage(text='更新時間:\n溫度:\n濕度:\n懸浮粒子(ug/m3)     氣體感測\nPM1:     MQ3:(ug/L)\nPM2.5:     MQ7:(ppm)\nPM10:     MQ135:(ppm)\n'))
 #主程式
 import os
 if __name__ == "__main__":
