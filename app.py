@@ -64,16 +64,14 @@ def handle_message(event):
                         title='裝置1',
                         text='請點選你想查看的資訊',
                         actions=[
-                            PostbackAction(
-                              label='環境資料',
-                              display_text='環境資料',
-                              data='環境資料'
-                            ),
-                             PostbackAction(
-                              label='裝置位置',
-                              display_text='裝置位置',
-                              data='裝置位置'
-                            ),
+                             MessageTemplateAction(
+                               label='環境資料',
+                               text='環境資料'
+                             ),
+                             MessageTemplateAction(
+                               label='裝置位置',
+                               text='裝置位置'
+                             ),
                             URIAction(
                                 label='環境影像',
                                 uri='https://marketingliveincode.com/?page_id=270'
@@ -85,16 +83,14 @@ def handle_message(event):
                         title='裝置2',
                         text='請點選你想查看的資訊',
                         actions=[
-                             PostbackAction(
-                              label='環境資料',
-                              display_text='環境資料',
-                              data='環境資料'
-                            ),
-                             PostbackAction(
-                              label='裝置位置',
-                              display_text='裝置位置',
-                              data='裝置位置'
-                            ),
+                             MessageTemplateAction(
+                               label='環境資料',
+                               text='環境資料'
+                             ),
+                             MessageTemplateAction(
+                               label='裝置位置',
+                               text='裝置位置'
+                             ),
                             URIAction(
                                 label='環境影像',
                                 uri='https://marketingliveincode.com/?page_id=2532'
@@ -106,16 +102,14 @@ def handle_message(event):
                         title='裝置3',
                         text='請點選你想查看的資訊',
                         actions=[
-                             PostbackAction(
-                              label='環境資料',
-                              display_text='環境資料',
-                              data='環境資料'
-                            ),
-                             PostbackAction(
-                              label='裝置位置',
-                              display_text='裝置位置',
-                              data='裝置位置'
-                            ),
+                             MessageTemplateAction(
+                               label='環境資料',
+                               text='環境資料'
+                             ),
+                             MessageTemplateAction(
+                               label='裝置位置',
+                               text='裝置位置'
+                             ),
                             URIAction(
                                 label='環境影像',
                                 uri='https://marketingliveincode.com/?page_id=270'
@@ -127,16 +121,14 @@ def handle_message(event):
                         title='裝置4',
                         text='請點選你想查看的資訊',
                         actions=[
-                             PostbackAction(
-                              label='環境資料',
-                              display_text='環境資料',
-                              data='環境資料'
-                            ),
-                             PostbackAction(
-                              label='裝置位置',
-                              display_text='裝置位置',
-                              data='裝置位置'
-                            ),
+                             MessageTemplateAction(
+                               label='環境資料',
+                               text='環境資料'
+                             ),
+                             MessageTemplateAction(
+                               label='裝置位置',
+                               text='裝置位置'
+                             ),
                             URIAction(
                                 label='環境影像',
                                 uri='https://marketingliveincode.com/?page_id=270'
@@ -148,16 +140,14 @@ def handle_message(event):
                         title='裝置5',
                         text='請點選你想查看的資訊',
                         actions=[
-                             PostbackAction(
-                              label='環境資料',
-                              display_text='環境資料',
-                              data='環境資料'
-                            ),
-                             PostbackAction(
-                              label='裝置位置',
-                              display_text='裝置位置',
-                              data='裝置位置'
-                            ),
+                            MessageTemplateAction(
+                               label='環境資料',
+                               text='環境資料'
+                             ),
+                             MessageTemplateAction(
+                               label='裝置位置',
+                               text='裝置位置'
+                             ),
                             URIAction(
                                 label='環境影像',
                                 uri='https://marketingliveincode.com/?page_id=2648'
@@ -169,8 +159,8 @@ def handle_message(event):
         )
         
         line_bot_api.reply_message(event.reply_token, carousel_template_message)
-    else:
-        line_bot_api.reply_message(event.reply_token, TextSendMessage(message))
+  #  else:
+   #     line_bot_api.reply_message(event.reply_token, TextSendMessage(message))
 #主程式
 import os
 if __name__ == "__main__":
