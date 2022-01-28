@@ -142,8 +142,8 @@ def handle_message(event):
             )
         )
         line_bot_api.reply_message(event.reply_token, carousel_template_message)
-   # elif re.match('環境資料',message):
-   #     line_bot_api.reply_message(event.reply_token, TextSendMessage(text))
+    elif re.match('環境資料',message):
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text))
     else:
         line_bot_api.reply_message(event.reply_token, TextSendMessage(message))
 #主程式
