@@ -62,9 +62,10 @@ def handle_message(event):
                         title='裝置1',
                         text='請點選你想查看的資訊',
                         actions=[
-                            MessageAction(
-                                label='環境資料',
-                                text='裝置1\n更新時間:\n溫度:\n濕度:\n懸浮粒子(ug/m3)\nPM1:\nPM2.5:\nPM10:\n氣體感測\nMQ3:(ug/L)\nMQ7:(ppm)\nMQ135:(ppm) '
+                            PostbackAction(
+                              label='環境資料',
+                              display_text='環境資料',
+                              data='裝置1\n更新時間:\n溫度:\n濕度:\n懸浮粒子(ug/m3)\nPM1:\nPM2.5:\nPM10:\n氣體感測\nMQ3:(ug/L)\nMQ7:(ppm)\nMQ135:(ppm) '
                             ),
                             URIAction(
                                 label='環境影像',
@@ -77,9 +78,10 @@ def handle_message(event):
                         title='裝置2',
                         text='請點選你想查看的資訊',
                         actions=[
-                            MessageAction(
-                                label='環境資料',
-                                text='裝置2\n更新時間:\n溫度:\n濕度:\n懸浮粒子(ug/m3)\nPM1:\nPM2.5:\nPM10:\n氣體感測\nMQ3:(ug/L)\nMQ7:(ppm)\nMQ135:(ppm) '
+                             PostbackAction(
+                              label='環境資料',
+                              display_text='環境資料',
+                              data='裝置2\n更新時間:\n溫度:\n濕度:\n懸浮粒子(ug/m3)\nPM1:\nPM2.5:\nPM10:\n氣體感測\nMQ3:(ug/L)\nMQ7:(ppm)\nMQ135:(ppm) '
                             ),
                             URIAction(
                                 label='環境影像',
@@ -92,9 +94,10 @@ def handle_message(event):
                         title='裝置3',
                         text='請點選你想查看的資訊',
                         actions=[
-                            MessageAction(
-                                label='環境資料',
-                                text='裝置3\n更新時間:\n溫度:\n濕度:\n懸浮粒子(ug/m3)\nPM1:\nPM2.5:\nPM10:\n氣體感測\nMQ3:(ug/L)\nMQ7:(ppm)\nMQ135:(ppm) '
+                             PostbackAction(
+                              label='環境資料',
+                              display_text='環境資料',
+                              data='裝置3\n更新時間:\n溫度:\n濕度:\n懸浮粒子(ug/m3)\nPM1:\nPM2.5:\nPM10:\n氣體感測\nMQ3:(ug/L)\nMQ7:(ppm)\nMQ135:(ppm) '
                             ),
                             URIAction(
                                 label='環境影像',
@@ -107,9 +110,10 @@ def handle_message(event):
                         title='裝置4',
                         text='請點選你想查看的資訊',
                         actions=[
-                            MessageAction(
-                                label='環境資料',
-                                text='裝置4\n更新時間:\n溫度:\n濕度:\n懸浮粒子(ug/m3)\nPM1:\nPM2.5:\nPM10:\n氣體感測\nMQ3:(ug/L)\nMQ7:(ppm)\nMQ135:(ppm) '
+                             PostbackAction(
+                              label='環境資料',
+                              display_text='環境資料',
+                              data='裝置4\n更新時間:\n溫度:\n濕度:\n懸浮粒子(ug/m3)\nPM1:\nPM2.5:\nPM10:\n氣體感測\nMQ3:(ug/L)\nMQ7:(ppm)\nMQ135:(ppm) '
                             ),
                             URIAction(
                                 label='環境影像',
@@ -122,9 +126,10 @@ def handle_message(event):
                         title='裝置5',
                         text='請點選你想查看的資訊',
                         actions=[
-                            MessageAction(
-                                label='教學內容',
-                                text='裝置5\n更新時間:\n溫度:\n濕度:\n懸浮粒子(ug/m3)\nPM1:\nPM2.5:\nPM10:\n氣體感測\nMQ3:(ug/L)\nMQ7:(ppm)\nMQ135:(ppm) '
+                             PostbackAction(
+                              label='環境資料',
+                              display_text='環境資料',
+                              data='裝置5\n更新時間:\n溫度:\n濕度:\n懸浮粒子(ug/m3)\nPM1:\nPM2.5:\nPM10:\n氣體感測\nMQ3:(ug/L)\nMQ7:(ppm)\nMQ135:(ppm) '
                             ),
                             URIAction(
                                 label='環境影像',
@@ -136,8 +141,8 @@ def handle_message(event):
             )
         )
         line_bot_api.reply_message(event.reply_token, carousel_template_message)
-   # else:
-      #  line_bot_api.reply_message(event.reply_token, TextSendMessage(message))
+    else:
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(data))
 #主程式
 import os
 if __name__ == "__main__":
