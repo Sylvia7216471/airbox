@@ -67,7 +67,12 @@ def handle_message(event):
                             PostbackAction(
                               label='環境資料',
                               display_text='環境資料',
-                              data='裝置1\n更新時間:\n溫度:\n濕度:\n懸浮粒子(ug/m3)\nPM1:\nPM2.5:\nPM10:\n氣體感測\nMQ3:(ug/L)\nMQ7:(ppm)\nMQ135:(ppm) '
+                              data='環境資料'
+                            ),
+                             PostbackAction(
+                              label='裝置位置',
+                              display_text='裝置位置',
+                              data='裝置位置'
                             ),
                             URIAction(
                                 label='環境影像',
@@ -83,7 +88,12 @@ def handle_message(event):
                              PostbackAction(
                               label='環境資料',
                               display_text='環境資料',
-                             data='裝置2\n更新時間:\n溫度:\n濕度:\n懸浮粒子(ug/m3)\nPM1:\nPM2.5:\nPM10:\n氣體感測\nMQ3:(ug/L)\nMQ7:(ppm)\nMQ135:(ppm) '
+                              data='環境資料'
+                            ),
+                             PostbackAction(
+                              label='裝置位置',
+                              display_text='裝置位置',
+                              data='裝置位置'
                             ),
                             URIAction(
                                 label='環境影像',
@@ -99,7 +109,12 @@ def handle_message(event):
                              PostbackAction(
                               label='環境資料',
                               display_text='環境資料',
-                              data='裝置3\n更新時間:\n溫度:\n濕度:\n懸浮粒子(ug/m3)\nPM1:\nPM2.5:\nPM10:\n氣體感測\nMQ3:(ug/L)\nMQ7:(ppm)\nMQ135:(ppm) '
+                              data='環境資料'
+                            ),
+                             PostbackAction(
+                              label='裝置位置',
+                              display_text='裝置位置',
+                              data='裝置位置'
                             ),
                             URIAction(
                                 label='環境影像',
@@ -115,7 +130,12 @@ def handle_message(event):
                              PostbackAction(
                               label='環境資料',
                               display_text='環境資料',
-                             data='裝置4\n更新時間:\n溫度:\n濕度:\n懸浮粒子(ug/m3)\nPM1:\nPM2.5:\nPM10:\n氣體感測\nMQ3:(ug/L)\nMQ7:(ppm)\nMQ135:(ppm) '
+                              data='環境資料'
+                            ),
+                             PostbackAction(
+                              label='裝置位置',
+                              display_text='裝置位置',
+                              data='裝置位置'
                             ),
                             URIAction(
                                 label='環境影像',
@@ -131,7 +151,12 @@ def handle_message(event):
                              PostbackAction(
                               label='環境資料',
                               display_text='環境資料',
-                             data='裝置5\n更新時間:\n溫度:\n濕度:\n懸浮粒子(ug/m3)\nPM1:\nPM2.5:\nPM10:\n氣體感測\nMQ3:(ug/L)\nMQ7:(ppm)\nMQ135:(ppm) '
+                              data='環境資料'
+                            ),
+                             PostbackAction(
+                              label='裝置位置',
+                              display_text='裝置位置',
+                              data='裝置位置'
                             ),
                             URIAction(
                                 label='環境影像',
@@ -144,12 +169,8 @@ def handle_message(event):
         )
         
         line_bot_api.reply_message(event.reply_token, carousel_template_message)
-    if re.search('環境資料',message):
-         line_bot_api.push_message(yourID, 
-                          TextSendMessage(text='裝置3\n更新時間:\n溫度:\n濕度:\n懸浮粒子(ug/m3)\nPM1:\nPM2.5:\nPM10:\n氣體感測\nMQ3:(ug/L)\nMQ7:(ppm)\nMQ135:(ppm)'))
     else:
         line_bot_api.reply_message(event.reply_token, TextSendMessage(message))
-        
 #主程式
 import os
 if __name__ == "__main__":
