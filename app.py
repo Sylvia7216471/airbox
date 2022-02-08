@@ -163,8 +163,8 @@ def handle_message(event):
         
         line_bot_api.reply_message(event.reply_token, carousel_template_message)
     elif re.match('環境資料',message):
-        line_bot_api.push_message(yourID, 
-                          TextSendMessage(text='更新時間:'))
+        #line_bot_api.push_message(yourID, 
+        #                  TextSendMessage(text='更新時間:'))
       #  line_bot_api.push_message(yourID, 
        #                   TextSendMessage(datetime_str))
         line_bot_api.push_message(yourID, 
