@@ -204,7 +204,7 @@ def handle_message(event):
     elif re.match('裝置位置1',message):
         location_message = LocationSendMessage(
             title='目前裝置1所在的位置',
-         ##   address='總統府',
+            address='總統府',
             latitude=25.040213810016002,
             longitude=121.51238385108306
         )
