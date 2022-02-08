@@ -242,27 +242,26 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token,location_message)
     elif re.match('環境影像1',message):
         image_message = ImageSendMessage(
-        original_content_url='https://www.google.com/url?sa=i&url=http%3A%2F%2Fyabeline.tw%2FStickers_Data.php%3FNumber%3D1466&psig=AOvVaw1cqUa1sEmYtkHkVkhZbBE8&ust=1644393020717000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCMjJvMHP7_UCFQAAAAAdAAAAABAD',
+        original_content_url='https://ibb.co/db9Mh4q',
         )
         line_bot_api.reply_message(event.reply_token, image_message)
     elif re.match('環境影像2',message):
         image_message = ImageSendMessage(
-        original_content_url='https://www.google.com/url?sa=i&url=http%3A%2F%2Fyabeline.tw%2FStickers_Data.php%3FNumber%3D1466&psig=AOvVaw1cqUa1sEmYtkHkVkhZbBE8&ust=1644393020717000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCMjJvMHP7_UCFQAAAAAdAAAAABAD',
-        )
+       original_content_url='https://ibb.co/db9Mh4q',
         line_bot_api.reply_message(event.reply_token, image_message)
     elif re.match('環境影像3',message):
         image_message = ImageSendMessage(
-        original_content_url='https://www.google.com/url?sa=i&url=http%3A%2F%2Fyabeline.tw%2FStickers_Data.php%3FNumber%3D1466&psig=AOvVaw1cqUa1sEmYtkHkVkhZbBE8&ust=1644393020717000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCMjJvMHP7_UCFQAAAAAdAAAAABAD',
+        original_content_url='https://ibb.co/db9Mh4q',
         )
         line_bot_api.reply_message(event.reply_token, image_message)
     elif re.match('環境影像4',message):
         image_message = ImageSendMessage(
-        original_content_url='https://www.google.com/url?sa=i&url=http%3A%2F%2Fyabeline.tw%2FStickers_Data.php%3FNumber%3D1466&psig=AOvVaw1cqUa1sEmYtkHkVkhZbBE8&ust=1644393020717000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCMjJvMHP7_UCFQAAAAAdAAAAABAD',
+        original_content_url='https://ibb.co/db9Mh4q',
         )
         line_bot_api.reply_message(event.reply_token, image_message)
     elif re.match('環境影像5',message):
         image_message = ImageSendMessage(
-        original_content_url='https://www.google.com/url?sa=i&url=http%3A%2F%2Fyabeline.tw%2FStickers_Data.php%3FNumber%3D1466&psig=AOvVaw1cqUa1sEmYtkHkVkhZbBE8&ust=1644393020717000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCMjJvMHP7_UCFQAAAAAdAAAAABAD',
+        original_content_url='https://ibb.co/db9Mh4q',
         )
         line_bot_api.reply_message(event.reply_token, image_message)
         
