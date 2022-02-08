@@ -55,7 +55,7 @@ def callback():
 def handle_message(event):
     message = text=event.message.text
     loc_dt = datetime.datetime.today() 
-    time_del = datetime.timedelta(hours=8) 
+    time_del = datetime.timedelta(hours=4) 
     new_dt = loc_dt - time_del 
     datetime_format = new_dt.strftime("%Y/%m/%d %H:%M:%S")
     loc_dt_format = loc_dt.strftime("%Y/%m/%d %H:%M:%S")
@@ -170,7 +170,7 @@ def handle_message(event):
         line_bot_api.push_message(yourID, 
                          TextSendMessage(text='更新時間:'))
         line_bot_api.push_message(yourID, 
-                          TextSendMessage(str(loc_dt_format)))
+                          TextSendMessage(str(datetime_format)))
         line_bot_api.push_message(yourID, 
                           TextSendMessage(text='溫度:\n濕度:\n懸浮粒子(ug/m3)\nPM1:\nPM2.5:\nPM10:\n氣體感測\nMQ3:(ug/L)\nMQ7:(ppm)\nMQ135:(ppm)'))
 #主程式
