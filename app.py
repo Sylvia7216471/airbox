@@ -77,7 +77,12 @@ def handle_message(event):
                              ),
                              MessageTemplateAction(
                                label='裝置位置',
-                               text='裝置位置'
+                               location_message = LocationSendMessage(
+                                title='日治時期的古蹟',
+                                address='總統府',
+                                latitude=25.040213810016002,
+                                longitude=121.51238385108306
+                                )
                              ),
                             URIAction(
                                 label='環境影像',
