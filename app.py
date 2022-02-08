@@ -72,20 +72,15 @@ def handle_message(event):
                         text='請點選你想查看的資訊',
                         actions=[
                              MessageTemplateAction(
-                               label='環境資料',
-                               text='環境資料'
+                               label='環境資料1',
+                               text='環境資料1'
                              ),
                              MessageTemplateAction(
-                               label='裝置位置',
-                               location_message = LocationSendMessage(
-                                title='日治時期的古蹟',
-                                address='總統府',
-                                latitude=25.040213810016002,
-                                longitude=121.51238385108306
-                                )
+                               label='裝置位置1',
+                               text='裝置位置1'
                              ),
                             URIAction(
-                                label='環境影像',
+                                label='環境影像1',
                                 uri='https://marketingliveincode.com/?page_id=270'
                             )
                         ]
@@ -96,15 +91,15 @@ def handle_message(event):
                         text='請點選你想查看的資訊',
                         actions=[
                              MessageTemplateAction(
-                               label='環境資料',
-                               text='環境資料'
+                               label='環境資料2',
+                               text='環境資料2'
                              ),
                              MessageTemplateAction(
-                               label='裝置位置',
-                               text='裝置位置'
+                               label='裝置位置2',
+                               text='裝置位置2'
                              ),
                             URIAction(
-                                label='環境影像',
+                                label='環境影像2',
                                 uri='https://marketingliveincode.com/?page_id=2532'
                             )
                         ]
@@ -115,15 +110,15 @@ def handle_message(event):
                         text='請點選你想查看的資訊',
                         actions=[
                              MessageTemplateAction(
-                               label='環境資料',
-                               text='環境資料'
+                               label='環境資料3',
+                               text='環境資料3'
                              ),
                              MessageTemplateAction(
-                               label='裝置位置',
-                               text='裝置位置'
+                               label='裝置位置3',
+                               text='裝置位置3'
                              ),
                             URIAction(
-                                label='環境影像',
+                                label='環境影像3',
                                 uri='https://marketingliveincode.com/?page_id=270'
                             )
                         ]
@@ -134,15 +129,15 @@ def handle_message(event):
                         text='請點選你想查看的資訊',
                         actions=[
                              MessageTemplateAction(
-                               label='環境資料',
-                               text='環境資料'
+                               label='環境資料4',
+                               text='環境資料4'
                              ),
                              MessageTemplateAction(
-                               label='裝置位置',
-                               text='裝置位置'
+                               label='裝置位置4',
+                               text='裝置位置4'
                              ),
                             URIAction(
-                                label='環境影像',
+                                label='環境影像4',
                                 uri='https://marketingliveincode.com/?page_id=270'
                             )
                         ]
@@ -153,15 +148,15 @@ def handle_message(event):
                         text='請點選你想查看的資訊',
                         actions=[
                             MessageTemplateAction(
-                               label='環境資料',
-                               text='環境資料'
+                               label='環境資料5',
+                               text='環境資料5'
                              ),
                              MessageTemplateAction(
-                               label='裝置位置',
-                               text='裝置位置'
+                               label='裝置位置5',
+                               text='裝置位置5'
                              ),
                             URIAction(
-                                label='環境影像',
+                                label='環境影像5',
                                 uri='https://marketingliveincode.com/?page_id=2648'
                             )
                         ]
@@ -171,13 +166,42 @@ def handle_message(event):
         )
         
         line_bot_api.reply_message(event.reply_token, carousel_template_message)
-    elif re.match('環境資料',message):
+    elif re.match('環境資料1',message):
         line_bot_api.push_message(yourID, 
                          TextSendMessage(text='更新時間:'))
         line_bot_api.push_message(yourID, 
                           TextSendMessage(str(datetime_format)))
         line_bot_api.push_message(yourID, 
                           TextSendMessage(text='溫度:\n濕度:\n懸浮粒子(ug/m3)\nPM1:\nPM2.5:\nPM10:\n氣體感測\nMQ3:(ug/L)\nMQ7:(ppm)\nMQ135:(ppm)'))
+    elif re.match('環境資料2',message):
+        line_bot_api.push_message(yourID, 
+                         TextSendMessage(text='更新時間:'))
+        line_bot_api.push_message(yourID, 
+                          TextSendMessage(str(datetime_format)))
+        line_bot_api.push_message(yourID, 
+                          TextSendMessage(text='溫度:\n濕度:\n懸浮粒子(ug/m3)\nPM1:\nPM2.5:\nPM10:\n氣體感測\nMQ3:(ug/L)\nMQ7:(ppm)\nMQ135:(ppm)'))
+    elif re.match('環境資料3',message):
+        line_bot_api.push_message(yourID, 
+                         TextSendMessage(text='更新時間:'))
+        line_bot_api.push_message(yourID, 
+                          TextSendMessage(str(datetime_format)))
+        line_bot_api.push_message(yourID, 
+                          TextSendMessage(text='溫度:\n濕度:\n懸浮粒子(ug/m3)\nPM1:\nPM2.5:\nPM10:\n氣體感測\nMQ3:(ug/L)\nMQ7:(ppm)\nMQ135:(ppm)'))
+    elif re.match('環境資料4',message):
+        line_bot_api.push_message(yourID, 
+                         TextSendMessage(text='更新時間:'))
+        line_bot_api.push_message(yourID, 
+                          TextSendMessage(str(datetime_format)))
+        line_bot_api.push_message(yourID, 
+                          TextSendMessage(text='溫度:\n濕度:\n懸浮粒子(ug/m3)\nPM1:\nPM2.5:\nPM10:\n氣體感測\nMQ3:(ug/L)\nMQ7:(ppm)\nMQ135:(ppm)'))
+    elif re.match('環境資料5',message):
+        line_bot_api.push_message(yourID, 
+                         TextSendMessage(text='更新時間:'))
+        line_bot_api.push_message(yourID, 
+                          TextSendMessage(str(datetime_format)))
+        line_bot_api.push_message(yourID, 
+                          TextSendMessage(text='溫度:\n濕度:\n懸浮粒子(ug/m3)\nPM1:\nPM2.5:\nPM10:\n氣體感測\nMQ3:(ug/L)\nMQ7:(ppm)\nMQ135:(ppm)'))
+    
 #主程式
 import os
 if __name__ == "__main__":
