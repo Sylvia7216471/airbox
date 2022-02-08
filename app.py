@@ -201,6 +201,13 @@ def handle_message(event):
                           TextSendMessage(str(datetime_format)))
         line_bot_api.push_message(yourID, 
                           TextSendMessage(text='溫度:\n濕度:\n懸浮粒子(ug/m3)\nPM1:\nPM2.5:\nPM10:\n氣體感測\nMQ3:(ug/L)\nMQ7:(ppm)\nMQ135:(ppm)'))
+    elif re.match('裝置位置1',message):
+        location_message = LocationSendMessage(
+            title='目前裝置1所在的位置',
+         ##   address='總統府',
+            latitude=25.040213810016002,
+            longitude=121.51238385108306
+        )
     
 #主程式
 import os
