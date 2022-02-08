@@ -208,6 +208,7 @@ def handle_message(event):
             latitude=25.040213810016002,
             longitude=121.51238385108306
         )
+        line_bot_api.reply_message(event.reply_token,location_message)
     
 #主程式
 import os
