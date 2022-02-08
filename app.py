@@ -203,7 +203,35 @@ def handle_message(event):
                           TextSendMessage(text='溫度:\n濕度:\n懸浮粒子(ug/m3)\nPM1:\nPM2.5:\nPM10:\n氣體感測\nMQ3:(ug/L)\nMQ7:(ppm)\nMQ135:(ppm)'))
     elif re.match('裝置位置1',message):
         location_message = LocationSendMessage(
-            title='目前裝置1所在的位置',
+            title='裝置1目前的所在位置',
+            address='總統府',
+            latitude=25.040213810016002,
+            longitude=121.51238385108306
+        )
+    elif re.match('裝置位置2',message):
+        location_message = LocationSendMessage(
+            title='裝置2目前的所在位置',
+            address='總統府',
+            latitude=25.040213810016002,
+            longitude=121.51238385108306
+        )
+    elif re.match('裝置位置3',message):
+        location_message = LocationSendMessage(
+            title='裝置3目前的所在位置',
+            address='總統府',
+            latitude=25.040213810016002,
+            longitude=121.51238385108306
+        )
+    elif re.match('裝置位置4',message):
+        location_message = LocationSendMessage(
+            title='裝置4目前的所在位置',
+            address='總統府',
+            latitude=25.040213810016002,
+            longitude=121.51238385108306
+        )
+    elif re.match('裝置位置5',message):
+        location_message = LocationSendMessage(
+            title='裝置5目前的所在位置',
             address='總統府',
             latitude=25.040213810016002,
             longitude=121.51238385108306
