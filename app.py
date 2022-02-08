@@ -79,9 +79,9 @@ def handle_message(event):
                                label='裝置位置1',
                                text='裝置位置1'
                              ),
-                            URIAction(
-                                label='環境影像1',
-                                uri='https://marketingliveincode.com/?page_id=270'
+                             MessageTemplateAction(
+                               label='環境影像1',
+                               text='環境影像1'
                             )
                         ]
                     ),
@@ -98,9 +98,9 @@ def handle_message(event):
                                label='裝置位置2',
                                text='裝置位置2'
                              ),
-                            URIAction(
-                                label='環境影像2',
-                                uri='https://marketingliveincode.com/?page_id=2532'
+                             MessageTemplateAction(
+                               label='環境影像2',
+                               text='環境影像2'
                             )
                         ]
                     ),
@@ -117,9 +117,9 @@ def handle_message(event):
                                label='裝置位置3',
                                text='裝置位置3'
                              ),
-                            URIAction(
-                                label='環境影像3',
-                                uri='https://marketingliveincode.com/?page_id=270'
+                             MessageTemplateAction(
+                               label='環境影像3',
+                               text='環境影像3'
                             )
                         ]
                     ),
@@ -136,9 +136,9 @@ def handle_message(event):
                                label='裝置位置4',
                                text='裝置位置4'
                              ),
-                            URIAction(
-                                label='環境影像4',
-                                uri='https://marketingliveincode.com/?page_id=270'
+                             MessageTemplateAction(
+                               label='環境影像4',
+                               text='環境影像4'
                             )
                         ]
                     ),
@@ -155,9 +155,9 @@ def handle_message(event):
                                label='裝置位置5',
                                text='裝置位置5'
                              ),
-                            URIAction(
-                                label='環境影像5',
-                                uri='https://marketingliveincode.com/?page_id=2648'
+                             MessageTemplateAction(
+                               label='環境影像5',
+                               text='環境影像5'
                             )
                         ]
                     )
