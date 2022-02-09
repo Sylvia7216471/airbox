@@ -224,6 +224,7 @@ def handle_message(event):
             latitude=25.040213810016002,
             longitude=121.51238385108306
         )
+        line_bot_api.reply_message(event.reply_token,location_message)
     elif re.match('裝置位置4',message):
         location_message = LocationSendMessage(
             title='裝置4目前的所在位置',
