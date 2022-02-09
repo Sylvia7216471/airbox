@@ -55,7 +55,7 @@ def callback():
 def handle_message(event):
     message = text=event.message.text
     loc_dt = datetime.datetime.today() 
-    time_del = datetime.timedelta(hours=4) 
+    time_del = datetime.timedelta(hours=9) 
     new_dt = loc_dt - time_del 
     datetime_format = new_dt.strftime("%Y/%m/%d %H:%M:%S")
     loc_dt_format = loc_dt.strftime("%Y/%m/%d %H:%M:%S")
@@ -243,26 +243,31 @@ def handle_message(event):
     elif re.match('環境影像1',message):
         image_message = ImageSendMessage(
         original_content_url='https://ibb.co/db9Mh4q',
+        preview_image_url='https://ibb.co/db9Mh4q'
         )
         line_bot_api.reply_message(event.reply_token, image_message)
     elif re.match('環境影像2',message):
         image_message = ImageSendMessage(
         original_content_url='https://ibb.co/db9Mh4q',
+        preview_image_url='https://ibb.co/db9Mh4q'
         )
         line_bot_api.reply_message(event.reply_token, image_message)
     elif re.match('環境影像3',message):
         image_message = ImageSendMessage(
         original_content_url='https://ibb.co/db9Mh4q',
+        preview_image_url='https://ibb.co/db9Mh4q'
         )
         line_bot_api.reply_message(event.reply_token, image_message)
     elif re.match('環境影像4',message):
         image_message = ImageSendMessage(
         original_content_url='https://ibb.co/db9Mh4q',
+        preview_image_url='https://ibb.co/db9Mh4q'
         )
         line_bot_api.reply_message(event.reply_token, image_message)
     elif re.match('環境影像5',message):
         image_message = ImageSendMessage(
         original_content_url='https://ibb.co/db9Mh4q',
+        preview_image_url='https://ibb.co/db9Mh4q'
         )
         line_bot_api.reply_message(event.reply_token, image_message)
         
