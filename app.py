@@ -55,7 +55,7 @@ def callback():
 def handle_message(event):
     message = text=event.message.text
     loc_dt = datetime.datetime.today() 
-    time_del = datetime.timedelta(hours=9) 
+    time_del = datetime.timedelta(hours=ˊ) 
     new_dt = loc_dt - time_del 
     datetime_format = new_dt.strftime("%Y/%m/%d %H:%M:%S")
     loc_dt_format = loc_dt.strftime("%Y/%m/%d %H:%M:%S")
@@ -242,32 +242,32 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token,location_message)
     elif re.match('環境影像1',message):
         image_message = ImageSendMessage(
-        original_content_url='https://ibb.co/db9Mh4q',
-        preview_image_url='https://ibb.co/db9Mh4q'
+        original_content_url='https://media.istockphoto.com/illustrations/tapir-illustration-id1128835465?k=20&m=1128835465&s=612x612&w=0&h=o5rGp2t8zFGLj_BrSqWes-d1DqeWtM3Z-_rQU73jfzA=',
+        preview_image_url='https://media.istockphoto.com/illustrations/tapir-illustration-id1128835465?k=20&m=1128835465&s=612x612&w=0&h=o5rGp2t8zFGLj_BrSqWes-d1DqeWtM3Z-_rQU73jfzA='
         )
         line_bot_api.reply_message(event.reply_token, image_message)
     elif re.match('環境影像2',message):
         image_message = ImageSendMessage(
-        original_content_url='https://ibb.co/db9Mh4q',
-        preview_image_url='https://ibb.co/db9Mh4q'
+        original_content_url='https://media.istockphoto.com/illustrations/tapir-illustration-id1128835465?k=20&m=1128835465&s=612x612&w=0&h=o5rGp2t8zFGLj_BrSqWes-d1DqeWtM3Z-_rQU73jfzA=',
+        preview_image_url='https://media.istockphoto.com/illustrations/tapir-illustration-id1128835465?k=20&m=1128835465&s=612x612&w=0&h=o5rGp2t8zFGLj_BrSqWes-d1DqeWtM3Z-_rQU73jfzA='
         )
         line_bot_api.reply_message(event.reply_token, image_message)
     elif re.match('環境影像3',message):
         image_message = ImageSendMessage(
-        original_content_url='https://ibb.co/db9Mh4q',
-        preview_image_url='https://ibb.co/db9Mh4q'
+        original_content_url='https://media.istockphoto.com/illustrations/tapir-illustration-id1128835465?k=20&m=1128835465&s=612x612&w=0&h=o5rGp2t8zFGLj_BrSqWes-d1DqeWtM3Z-_rQU73jfzA=',
+        preview_image_url='https://media.istockphoto.com/illustrations/tapir-illustration-id1128835465?k=20&m=1128835465&s=612x612&w=0&h=o5rGp2t8zFGLj_BrSqWes-d1DqeWtM3Z-_rQU73jfzA='
         )
         line_bot_api.reply_message(event.reply_token, image_message)
     elif re.match('環境影像4',message):
         image_message = ImageSendMessage(
-        original_content_url='https://ibb.co/db9Mh4q',
-        preview_image_url='https://ibb.co/db9Mh4q'
+        original_content_url='https://media.istockphoto.com/illustrations/tapir-illustration-id1128835465?k=20&m=1128835465&s=612x612&w=0&h=o5rGp2t8zFGLj_BrSqWes-d1DqeWtM3Z-_rQU73jfzA=',
+        preview_image_url='https://media.istockphoto.com/illustrations/tapir-illustration-id1128835465?k=20&m=1128835465&s=612x612&w=0&h=o5rGp2t8zFGLj_BrSqWes-d1DqeWtM3Z-_rQU73jfzA='
         )
         line_bot_api.reply_message(event.reply_token, image_message)
     elif re.match('環境影像5',message):
         image_message = ImageSendMessage(
-        original_content_url='https://ibb.co/db9Mh4q',
-        preview_image_url='https://ibb.co/db9Mh4q'
+        original_content_url='https://media.istockphoto.com/illustrations/tapir-illustration-id1128835465?k=20&m=1128835465&s=612x612&w=0&h=o5rGp2t8zFGLj_BrSqWes-d1DqeWtM3Z-_rQU73jfzA=',
+        preview_image_url='https://media.istockphoto.com/illustrations/tapir-illustration-id1128835465?k=20&m=1128835465&s=612x612&w=0&h=o5rGp2t8zFGLj_BrSqWes-d1DqeWtM3Z-_rQU73jfzA='
         )
         line_bot_api.reply_message(event.reply_token, image_message)
         
