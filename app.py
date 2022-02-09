@@ -247,7 +247,8 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, image_message)
     elif re.match('環境影像2',message):
         image_message = ImageSendMessage(
-       original_content_url='https://ibb.co/db9Mh4q',
+        original_content_url='https://ibb.co/db9Mh4q',
+        )
         line_bot_api.reply_message(event.reply_token, image_message)
     elif re.match('環境影像3',message):
         image_message = ImageSendMessage(
