@@ -34,7 +34,7 @@ client.on_message = on_message
 #client.username_pw_set("try","xxxx")
 
 # 設定連線資訊(IP, Port, 連線時間)
-client.connect("120.119.157.238", 1800, 60)
+client.connect("192.168.0.5", 1883, 60)
 
 # 開始連線，執行設定的動作和處理重新連線問題
 # 也可以手動使用其他loop函式來進行連接
