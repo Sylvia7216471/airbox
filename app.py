@@ -28,7 +28,7 @@ client.loop_start()
 client.username_pw_set("Sylvia","Sylvia")
 broker="120.119.157.238"
 print("Connecting to broker ",broker)
-client.connect(120.119.157.238,1800)      #connect to broker
+client.connect("120.119.157.238",1800)      #connect to broker
 
 while not client.connected_flag: #wait in loop
     print("In wait loop")
