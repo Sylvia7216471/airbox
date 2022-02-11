@@ -1,18 +1,8 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Wed Jun  2 21:16:35 2021
 
-@author: Ivan
-版權屬於「行銷搬進大程式」所有，若有疑問，可聯絡ivanyang0606@gmail.com
-
-Line Bot聊天機器人
-第四章 選單功能
-多樣版組合按鈕CarouselTemplate
-"""
-
-import paho.mqtt.client as mqtt  #import the client1
+import paho.mqtt.client as mqtt
 import time
 
+# Define event callbacks
 def on_connect(client, userdata, flags, rc):
     if rc==0:
         client.connected_flag=True #set flag
@@ -20,21 +10,33 @@ def on_connect(client, userdata, flags, rc):
     else:
         print("Bad connection Returned code=",rc)
 
-mqtt.Client.connected_flag=False#create flag in class
+    # 將訂閱主題寫在on_connet中
+    # 如果我們失去連線或重新連線時 
+    # 地端程式將會重新訂閱
+    client.subscribe("liru")
 
-client = mqtt.Client()             #create new instance 
-client.on_connect=on_connect  #bind call back function
-client.loop_start()
-client.username_pw_set("Sylvia","Sylvia")
-broker="120.119.157.238"
-print("Connecting to broker ",broker)
-client.connect("127.0.0.1",1883)      #connect to broker
+# 當接收到從伺服器發送的訊息時要進行的動作
+def on_message(client, userdata, msg):
+    # 轉換編碼utf-8才看得懂中文
+    print(msg.topic+" "+ msg.payload.decode('utf-8'))
 
-while not client.connected_flag: #wait in loop
-    print("In wait loop")
-    time.sleep(1)
-print("in Main Loop")
+# 連線設定
+# 初始化地端程式
+client = mqtt.Client()
 
-client.loop_stop()    #Stop loop 
-client.disconnect() # disconnect
+# 設定連線的動作
+client.on_connect = on_connect
+
+# 設定接收訊息的動作
+client.on_message = on_message
+
+# 設定登入帳號密碼
+#client.username_pw_set("try","xxxx")
+
+# 設定連線資訊(IP, Port, 連線時間)
+client.connect("120.119.157.238", 1800, 60)
+
+# 開始連線，執行設定的動作和處理重新連線問題
+# 也可以手動使用其他loop函式來進行連接
+client.loop_forever()
 
