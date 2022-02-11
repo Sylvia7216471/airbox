@@ -8,5 +8,5 @@ SnowNLP
 emoji 
 pyshorteners 
 scipy
-paho-mqtt
+paho-mqtt==1.3.0
 
