@@ -25,6 +25,7 @@ mqtt.Client.connected_flag=False#create flag in class
 client = mqtt.Client()             #create new instance 
 client.on_connect=on_connect  #bind call back function
 client.loop_start()
+client.username_pw_set("Sylvia","Sylvia")
 broker="120.119.157.238"
 print("Connecting to broker ",broker)
 client.connect(broker,1800)      #connect to broker
