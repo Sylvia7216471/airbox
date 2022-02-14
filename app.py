@@ -56,7 +56,7 @@ def handle_message(event):
     message = text=event.message.text
     loc_dt = datetime.datetime.today() 
     time_del = datetime.timedelta(hours=16) 
-    new_dt = loc_dt - time_del 
+    new_dt = loc_dt + time_del 
     datetime_format = new_dt.strftime("%Y/%m/%d %H:%M:%S")
     loc_dt_format = loc_dt.strftime("%Y/%m/%d %H:%M:%S")
  #  message2="裝置1\n更新時間:\n溫度:\n濕度:\n懸浮粒子(ug/m3)\nPM1:\nPM2.5:\nPM10:\n氣體感測\nMQ3:(ug/L)\nMQ7:(ppm)\nMQ135:(ppm)"
