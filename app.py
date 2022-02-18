@@ -34,8 +34,7 @@ line_bot_api.push_message('Uc2c240ca992c30a49afa0a29288ee53d', TextSendMessage(t
 
 #資料庫連線設定
 db = pymysql.connect(host='us-cdbr-east-05.cleardb.net', port='', user='b27ce87b980a11', passwd='167961db', database = "heroku_5ce6e6298fde0f2")
-#建立操作游標
-cursor = db.cursor()
+
 
 
 # 監聽所有來自 /callback 的 Post Request
