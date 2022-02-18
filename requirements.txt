@@ -9,4 +9,4 @@ emoji
 pyshorteners 
 scipy
 paho-mqtt==1.3.0
-
+pymysql
