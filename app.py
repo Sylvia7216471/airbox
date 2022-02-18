@@ -23,6 +23,7 @@ import re
 app = Flask(__name__)
 
 import datetime
+import pymysql
 
 # 必須放上自己的Channel Access Token
 line_bot_api = LineBotApi('0ZtGtrSOwbENt1n2Z0cehZ610JCO8aaojjiqtyOJlpt1/M85m3UpKTWiEpfmx+2vhLTgSLwnFe8DRpUQBsWjTWNUhG5O9KnlAbF7IIYWbPYKh+CLZ9E0c9H4FG0bCfGdpcbajZ42KRQgmexjrNbQzQdB04t89/1O/w1cDnyilFU=')
@@ -30,6 +31,13 @@ line_bot_api = LineBotApi('0ZtGtrSOwbENt1n2Z0cehZ610JCO8aaojjiqtyOJlpt1/M85m3UpK
 handler = WebhookHandler('01bbcb3ed094f619ac3be5b6fe352942')
 
 line_bot_api.push_message('Uc2c240ca992c30a49afa0a29288ee53d', TextSendMessage(text='你可以開始了'))
+
+#資料庫連線設定
+#可縮寫db = pymysql.connect("localhost","root","root","30days" )
+db = pymysql.connect(host='120.119.157.238', port=1801, user='LiRu', passwd='', database = "iot")
+#建立操作游標
+cursor = db.cursor()
+
 
 # 監聽所有來自 /callback 的 Post Request
 @app.route("/callback", methods=['POST'])
@@ -55,10 +63,13 @@ def callback():
 def handle_message(event):
     message = text=event.message.text
     loc_dt = datetime.datetime.today() 
-    time_del = datetime.timedelta(hours=8) 
-    new_dt = loc_dt + time_del 
+    time_del = datetime.timedelta(hours=16) 
+    new_dt = loc_dt - time_del 
     datetime_format = new_dt.strftime("%Y/%m/%d %H:%M:%S")
     loc_dt_format = loc_dt.strftime("%Y/%m/%d %H:%M:%S")
+    cursor.execute("SELECT * FROM device_5")
+    result = cursor.fetchone()
+for row in result:
  #  message2="裝置1\n更新時間:\n溫度:\n濕度:\n懸浮粒子(ug/m3)\nPM1:\nPM2.5:\nPM10:\n氣體感測\nMQ3:(ug/L)\nMQ7:(ppm)\nMQ135:(ppm)"
     yourID = 'Uc2c240ca992c30a49afa0a29288ee53d'
     if re.match('我想選擇裝置',message):
@@ -172,7 +183,7 @@ def handle_message(event):
         line_bot_api.push_message(yourID, 
                           TextSendMessage(str(datetime_format)))
         line_bot_api.push_message(yourID, 
-                          TextSendMessage(text='溫度:\n濕度:\n懸浮粒子(ug/m3)\nPM1:\nPM2.5:\nPM10:\n氣體感測\nMQ3:(ug/L)\nMQ7:(ppm)\nMQ135:(ppm)'))
+                          TextSendMessage(text='溫度:\n濕度:\n懸浮粒子(ug/m3)\nPM1:\nPM2.5:\nPM10:\n氣體感測\nMQ3:(ug/L)\nMQ7:(ppm)\nMQ135:(ppm)'+row))
     elif re.match('環境資料2',message):
         line_bot_api.push_message(yourID, 
                          TextSendMessage(text='更新時間:'))
@@ -272,7 +283,7 @@ def handle_message(event):
         )
         line_bot_api.reply_message(event.reply_token, image_message)
     
-        
+        db.close()
 #主程式
 import os
 if __name__ == "__main__":
