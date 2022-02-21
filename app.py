@@ -34,7 +34,10 @@ line_bot_api.push_message('Uc2c240ca992c30a49afa0a29288ee53d', TextSendMessage(t
 
 #資料庫連線設定
 db = pymysql.connect(host='us-cdbr-east-05.cleardb.net', port='', user='b27ce87b980a11', passwd='167961db', database = "heroku_5ce6e6298fde0f2")
-
+cursor.execute("SELECT * FROM device_5")
+result = cursor.fetchone()
+for row in result:
+    
 
 
 # 監聽所有來自 /callback 的 Post Request
@@ -179,7 +182,7 @@ def handle_message(event):
         line_bot_api.push_message(yourID, 
                           TextSendMessage(str(datetime_format)))
         line_bot_api.push_message(yourID, 
-                          TextSendMessage(text='溫度:\n濕度:\n懸浮粒子(ug/m3)\nPM1:\nPM2.5:\nPM10:\n氣體感測\nMQ3:(ug/L)\nMQ7:(ppm)\nMQ135:(ppm)'))
+                          TextSendMessage(text='溫度:\n濕度:\n懸浮粒子(ug/m3)\nPM1:\nPM2.5:\nPM10:\n氣體感測\nMQ3:(ug/L)\nMQ7:(ppm)\nMQ135:(ppm)')+row)
     elif re.match('環境資料2',message):
         line_bot_api.push_message(yourID, 
                          TextSendMessage(text='更新時間:'))
