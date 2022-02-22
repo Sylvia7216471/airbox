@@ -196,7 +196,7 @@ def handle_message(event):
                           TextSendMessage(str(datetime_format)))
         line_bot_api.push_message(yourID, 
                           TextSendMessage(text='測量時間:'+str(result1)))
-         line_bot_api.push_message(yourID, 
+        line_bot_api.push_message(yourID, 
                           TextSendMessage(text='溫度:'+str(result2)))                     
     elif re.match('環境資料2',message):
         line_bot_api.push_message(yourID, 
