@@ -56,7 +56,7 @@ db = pymysql.connect(host='us-cdbr-east-05.cleardb.net', port='', user='b27ce87b
 cursor = db.cursor()
 cursor.execute("SELECT PM1 FROM device_5")
 result = cursor.fetchone()
-
+for row in result:
 
 #訊息傳遞區塊
 ##### 基本上程式編輯都在這個function #####
@@ -181,7 +181,7 @@ def handle_message(event):
         line_bot_api.push_message(yourID, 
                           TextSendMessage(str(datetime_format)))
         line_bot_api.push_message(yourID, 
-                          TextSendMessage(text='row'))
+                          TextSendMessage(text='row'+str(row)))
     elif re.match('環境資料2',message):
         line_bot_api.push_message(yourID, 
                          TextSendMessage(text='更新時間:'))
