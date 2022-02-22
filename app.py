@@ -32,12 +32,6 @@ handler = WebhookHandler('01bbcb3ed094f619ac3be5b6fe352942')
 
 line_bot_api.push_message('Uc2c240ca992c30a49afa0a29288ee53d', TextSendMessage(text='HI'))
 
-#資料庫連線設定
-db = pymysql.connect(host='us-cdbr-east-05.cleardb.net', port='', user='b27ce87b980a11', passwd='167961db', database = "heroku_5ce6e6298fde0f2")
-cursor.execute("SELECT PM1 FROM device_5")
-result = cursor.fetchone()
-
-    
 
 # 監聽所有來自 /callback 的 Post Request
 @app.route("/callback", methods=['POST'])
@@ -56,6 +50,12 @@ def callback():
         abort(400)
 
     return 'OK'
+
+#資料庫連線設定
+db = pymysql.connect(host='us-cdbr-east-05.cleardb.net', port='', user='b27ce87b980a11', passwd='167961db', database = "heroku_5ce6e6298fde0f2")
+cursor.execute("SELECT PM1 FROM device_5")
+result = cursor.fetchone()
+
 
 #訊息傳遞區塊
 ##### 基本上程式編輯都在這個function #####
