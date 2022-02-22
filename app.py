@@ -54,7 +54,7 @@ def callback():
 #資料庫連線設定
 db = pymysql.connect(host='us-cdbr-east-05.cleardb.net', port='', user='b27ce87b980a11', passwd='167961db', database = "heroku_5ce6e6298fde0f2")
 cursor = db.cursor()
-cursor.execute("SELECT PM1 FROM device_5")
+cursor.execute("SELECT * FROM device_5")
 result = cursor.fetchone()
 
 #訊息傳遞區塊
@@ -179,7 +179,7 @@ def handle_message(event):
         line_bot_api.push_message(yourID, 
                           TextSendMessage(str(datetime_format)))
         line_bot_api.push_message(yourID, 
-                          TextSendMessage(text='row'+str(result)))
+                          TextSendMessage(text='溫度:,濕度:,PM1:,PM2.5:,PM10:,MQ3:(ug/L),MQ7:(ppm),MQ135:(ppm)'+str(result)))
     elif re.match('環境資料2',message):
         line_bot_api.push_message(yourID, 
                          TextSendMessage(text='更新時間:'))
