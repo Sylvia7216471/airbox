@@ -32,11 +32,7 @@ handler = WebhookHandler('01bbcb3ed094f619ac3be5b6fe352942')
 
 line_bot_api.push_message('Uc2c240ca992c30a49afa0a29288ee53d', TextSendMessage(text='你可以開始了'))
 
-#資料庫連線設定
-db = pymysql.connect(host='us-cdbr-east-05.cleardb.net', port='', user='b27ce87b980a11', passwd='167961db', database = "heroku_5ce6e6298fde0f2")
-cursor.execute("SELECT PM1 FROM device_5")
-result = cursor.fetchone()
-for row in result:
+
     
 
 
@@ -183,7 +179,7 @@ def handle_message(event):
         line_bot_api.push_message(yourID, 
                           TextSendMessage(str(datetime_format)))
         line_bot_api.push_message(yourID, 
-                          TextSendMessage(text='row:'+str(row)))
+                          TextSendMessage(text='row:'))
     elif re.match('環境資料2',message):
         line_bot_api.push_message(yourID, 
                          TextSendMessage(text='更新時間:'))
