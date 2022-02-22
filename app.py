@@ -54,8 +54,24 @@ def callback():
 #資料庫連線設定
 db = pymysql.connect(host='us-cdbr-east-05.cleardb.net', port='', user='b27ce87b980a11', passwd='167961db', database = "heroku_5ce6e6298fde0f2")
 cursor = db.cursor()
-cursor.execute("SELECT * FROM device_5")
-result = cursor.fetchone()
+cursor.execute("SELECT time FROM device_5 ORDER BY time DESC LIMIT 1")
+result1 = cursor.fetchone()
+cursor.execute("SELECT temperature FROM device_5 ORDER BY time DESC LIMIT 1")
+result2 = cursor.fetchone()
+cursor.execute("SELECT humidity FROM device_5 ORDER BY time DESC LIMIT 1")
+result3 = cursor.fetchone()
+cursor.execute("SELECT PM1 FROM device_5 ORDER BY time DESC LIMIT 1")
+result4 = cursor.fetchone()
+cursor.execute("SELECT PM25 FROM device_5 ORDER BY time DESC LIMIT 1")
+result5 = cursor.fetchone()
+cursor.execute("SELECT PM10 FROM device_5 ORDER BY time DESC LIMIT 1")
+result6 = cursor.fetchone()
+cursor.execute("SELECT MQ3 FROM device_5 ORDER BY time DESC LIMIT 1")
+result7 = cursor.fetchone()
+cursor.execute("SELECT MQ7 FROM device_5 ORDER BY time DESC LIMIT 1")
+result8 = cursor.fetchone()
+cursor.execute("SELECT MQ135 FROM device_5 ORDER BY time DESC LIMIT 1")
+result9 = cursor.fetchone()
 
 #訊息傳遞區塊
 ##### 基本上程式編輯都在這個function #####
@@ -179,7 +195,7 @@ def handle_message(event):
         line_bot_api.push_message(yourID, 
                           TextSendMessage(str(datetime_format)))
         line_bot_api.push_message(yourID, 
-                          TextSendMessage(text='溫度:,濕度:,PM1:,PM2.5:,PM10:,MQ3:(ug/L),MQ7:(ppm),MQ135:(ppm)\n'+str(result)))
+                          TextSendMessage(text='測量時間:'+str(result1)\n,'溫度:'+str(result2)\n,'濕度:'+str(result3)\n,'PM1:(ug/m3)'+str(result4)\n,'PM2.5:(ug/m3)'+str(result5)\n,'PM10:(ug/m3)'+str(result6)\n,'MQ3:(ug/L)'+str(result7)\n,'MQ7:(ppm)'+str(result8)\n,'MQ135:(ppm)'+str(result9)))
     elif re.match('環境資料2',message):
         line_bot_api.push_message(yourID, 
                          TextSendMessage(text='更新時間:'))
