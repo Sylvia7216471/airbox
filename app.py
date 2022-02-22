@@ -30,13 +30,13 @@ line_bot_api = LineBotApi('0ZtGtrSOwbENt1n2Z0cehZ610JCO8aaojjiqtyOJlpt1/M85m3UpK
 # 必須放上自己的Channel Secret
 handler = WebhookHandler('01bbcb3ed094f619ac3be5b6fe352942')
 
-line_bot_api.push_message('Uc2c240ca992c30a49afa0a29288ee53d', TextSendMessage(text='你可以開始了'))
+line_bot_api.push_message('Uc2c240ca992c30a49afa0a29288ee53d', TextSendMessage(text='HI'))
 
 #資料庫連線設定
 db = pymysql.connect(host='us-cdbr-east-05.cleardb.net', port='', user='b27ce87b980a11', passwd='167961db', database = "heroku_5ce6e6298fde0f2")
 cursor.execute("SELECT PM1 FROM device_5")
 result = cursor.fetchone()
-for row in result:
+
     
 
 # 監聽所有來自 /callback 的 Post Request
@@ -63,8 +63,8 @@ def callback():
 def handle_message(event):
     message = text=event.message.text
     loc_dt = datetime.datetime.today() 
-    time_del = datetime.timedelta(hours=16) 
-    new_dt = loc_dt - time_del 
+    time_del = datetime.timedelta(hours=8) 
+    new_dt = loc_dt + time_del 
     datetime_format = new_dt.strftime("%Y/%m/%d %H:%M:%S")
     loc_dt_format = loc_dt.strftime("%Y/%m/%d %H:%M:%S")
  #  message2="裝置1\n更新時間:\n溫度:\n濕度:\n懸浮粒子(ug/m3)\nPM1:\nPM2.5:\nPM10:\n氣體感測\nMQ3:(ug/L)\nMQ7:(ppm)\nMQ135:(ppm)"
@@ -180,7 +180,7 @@ def handle_message(event):
         line_bot_api.push_message(yourID, 
                           TextSendMessage(str(datetime_format)))
         line_bot_api.push_message(yourID, 
-                          TextSendMessage(text='row'+str(row)))
+                          TextSendMessage(text='row'))
     elif re.match('環境資料2',message):
         line_bot_api.push_message(yourID, 
                          TextSendMessage(text='更新時間:'))
