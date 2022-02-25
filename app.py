@@ -54,6 +54,21 @@ def callback():
 #資料庫連線設定
 db = pymysql.connect(host='us-cdbr-east-05.cleardb.net', port='', user='b27ce87b980a11', passwd='167961db', database = "heroku_5ce6e6298fde0f2")
 
+cursor2 = db.cursor()
+cursor2.execute("SELECT * FROM device_5 ORDER BY time DESC LIMIT 1")
+result2 = cursor2.fetchone()
+result12=result2[1]
+result22=result2[2]
+result32=result2[3]
+result42=result2[4]
+result52=result2[5]
+result62=result2[6]
+result72=result2[7]
+result82=result2[8]
+result92=result2[9]
+result102=result2[10]
+result112=result2[11]
+
 cursor5 = db.cursor()
 cursor5.execute("SELECT * FROM device_5 ORDER BY time DESC LIMIT 1")
 result5 = cursor5.fetchone()
