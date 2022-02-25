@@ -56,78 +56,78 @@ db = pymysql.connect(host='us-cdbr-east-05.cleardb.net', port='', user='b27ce87b
 
 cursor1 = db.cursor()
 cursor1.execute("SELECT * FROM device_1 ORDER BY time DESC LIMIT 1")
-result_1 = cursor1.fetchone()
-result1_1=result_1[1]
-result2_1=result_1[2]
-result3_1=result_1[3]
-result4_1=result_1[4]
-result5_1=result_1[5]
-result6_1=result_1[6]
-result7_1=result_1[7]
-result8_1=result_1[8]
-result9_1=result_1[9]
-result10_1=result_1[10]
-result11_1=result_1[11]
+result1 = cursor1.fetchone()
+result11=result1[1]
+result21=result1[2]
+result31=result1[3]
+result41=result1[4]
+result51=result1[5]
+result61=result1[6]
+result71=result1[7]
+result81=result1[8]
+result91=result1[9]
+result101=result1[10]
+result111=result1[11]
 
 cursor2 = db.cursor()
 cursor2.execute("SELECT * FROM device_2 ORDER BY time DESC LIMIT 1")
-result_2 = cursor2.fetchone()
-result1_2=result_2[1]
-result2_2=result_2[2]
-result3_2=result_2[3]
-result4_2=result_2[4]
-result5_2=result_2[5]
-result6_2=result_2[6]
-result7_2=result_2[7]
-result8_2=result_2[8]
-result9_2=result_2[9]
-result10_2=result_2[10]
-result11_2=result_2[11]
+result2 = cursor2.fetchone()
+result12=result2[1]
+result22=result2[2]
+result32=result2[3]
+result42=result2[4]
+result52=result2[5]
+result62=result2[6]
+result72=result2[7]
+result82=result2[8]
+result92=result2[9]
+result102=result2[10]
+result112=result2[11]
 
 cursor3 = db.cursor()
 cursor3.execute("SELECT * FROM device_3 ORDER BY time DESC LIMIT 1")
-result_3 = cursor3.fetchone()
-result1_3=result_3[1]
-result2_3=result_3[2]
-result3_3=result_3[3]
-result4_3=result_3[4]
-result5_3=result_3[5]
-result6_3=result_3[6]
-result7_3=result_3[7]
-result8_3=result_3[8]
-result9_3=result_3[9]
-result10_3=result_3[10]
-result11_3=result_3[11]
+result3 = cursor3.fetchone()
+result13=result3[1]
+result23=result3[2]
+result33=result3[3]
+result43=result3[4]
+result53=result3[5]
+result63=result3[6]
+result73=result3[7]
+result83=result3[8]
+result93=result3[9]
+result103=result3[10]
+result113=result3[11]
 
 cursor4 = db.cursor()
 cursor4.execute("SELECT * FROM device_4 ORDER BY time DESC LIMIT 1")
-result_4 = cursor4.fetchone()
-result1_4=result_4[1]
-result2_4=result_4[2]
-result3_4=result_4[3]
-result4_4=result_4[4]
-result5_4=result_4[5]
-result6_4=result_4[6]
-result7_4=result_4[7]
-result8_4=result_4[8]
-result9_4=result_4[9]
-result10_4=result_4[10]
+result4 = cursor4.fetchone()
+result14=result4[1]
+result24=result4[2]
+result34=result4[3]
+result44=result4[4]
+result54=result4[5]
+result64=result4[6]
+result74=result4[7]
+result84=result4[8]
+result94=result4[9]
+result104=result4[10]
 result11_4=result_4[11]
 
 cursor5 = db.cursor()
 cursor5.execute("SELECT * FROM device_5 ORDER BY time DESC LIMIT 1")
-result_5 = cursor5.fetchone()
-result1_5=result_5[1]
-result2_5=result_5[2]
-result3_5=result_5[3]
-result4_5=result_[4]
-result5_5=result_5[5]
-result6_5=result_5[6]
-result7_5=result_5[7]
-result8_5=result_5[8]
-result9_5=result_5[9]
-result10_5=result_5[10]
-result11_5=result_5[11]
+result5 = cursor5.fetchone()
+result15=result5[1]
+result25=result5[2]
+result35=result5[3]
+result45=result5[4]
+result55=result5[5]
+result65=result5[6]
+result75=result5[7]
+result85=result5[8]
+result95=result5[9]
+result105=result5[10]
+result115=result5[11]
 
 db.close()
 
@@ -252,7 +252,7 @@ def handle_message(event):
                          TextSendMessage(text='更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(result1_1)+'\n'+'溫度: '+str(result2_1)+'˚C'+'\n'+'濕度: '+str(result3_1)+'RH'+'\n'+'PM1: '+str(result4_1)+'μg/m3'+'\n'+'PM25: '+str(result5_1)+'μg/m3'+'\n'+'PM10: '+str(result6_1)+'μg/m3'+'\n'+'MQ3: '+str(result7_1)+'μg/L'+'\n'+'MQ10: '+str(result8_1)+'μg/L'+'\n'+'MQ135: '+str(result9_1)+'μg/L')) 
     elif re.match('環境資料2',message):
         line_bot_api.push_message(yourID, 
-                         TextSendMessage(text='更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(result1_2)+'\n'+'溫度: '+str(result2_3)+'˚C'+'\n'+'濕度: '+str(result3_2)+'RH'+'\n'+'PM1: '+str(result4_2)+'μg/m3'+'\n'+'PM25: '+str(result5_2)+'μg/m3'+'\n'+'PM10: '+str(result6_2)+'μg/m3'+'\n'+'MQ3: '+str(result7_2)+'μg/L'+'\n'+'MQ10: '+str(result8_2)+'μg/L'+'\n'+'MQ135: '+str(result9_2)+'μg/L'))
+                         TextSendMessage(text='更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(result12)+'\n'+'溫度: '+str(result23)+'˚C'+'\n'+'濕度: '+str(result32)+'RH'+'\n'+'PM1: '+str(result42)+'μg/m3'+'\n'+'PM25: '+str(result52)+'μg/m3'+'\n'+'PM10: '+str(result62)+'μg/m3'+'\n'+'MQ3: '+str(result72)+'μg/L'+'\n'+'MQ10: '+str(result82)+'μg/L'+'\n'+'MQ135: '+str(result92)+'μg/L'))
     elif re.match('環境資料3',message):
           line_bot_api.push_message(yourID, 
                          TextSendMessage(text='更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(result1_3)+'\n'+'溫度: '+str(result2_3)+'˚C'+'\n'+'濕度: '+str(result3_3)+'RH'+'\n'+'PM1: '+str(result4_3)+'μg/m3'+'\n'+'PM25: '+str(result5_3)+'μg/m3'+'\n'+'PM10: '+str(result6_3)+'μg/m3'+'\n'+'MQ3: '+str(result7_3)+'μg/L'+'\n'+'MQ10: '+str(result8_3)+'μg/L'+'\n'+'MQ135: '+str(result9_3)+'μg/L'))
@@ -261,7 +261,7 @@ def handle_message(event):
                          TextSendMessage(text='更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(result1_4)+'\n'+'溫度: '+str(result2_4)+'˚C'+'\n'+'濕度: '+str(result3_4)+'RH'+'\n'+'PM1: '+str(result4_4)+'μg/m3'+'\n'+'PM25: '+str(result5_4)+'μg/m3'+'\n'+'PM10: '+str(result6_4)+'μg/m3'+'\n'+'MQ3: '+str(result7_4)+'μg/L'+'\n'+'MQ10: '+str(result8_4)+'μg/L'+'\n'+'MQ135: '+str(result9_4)+'μg/L'))
     elif re.match('環境資料5',message):
         line_bot_api.push_message(yourID, 
-                         TextSendMessage(text='更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(result1_5)+'\n'+'溫度: '+str(result2_5)+'˚C'+'\n'+'濕度: '+str(result3_5)+'RH'+'\n'+'PM1: '+str(result4_5)+'μg/m3'+'\n'+'PM25: '+str(result5_5)+'μg/m3'+'\n'+'PM10: '+str(result6_5)+'μg/m3'+'\n'+'MQ3: '+str(result7_5)+'μg/L'+'\n'+'MQ10: '+str(result8_5)+'μg/L'+'\n'+'MQ135: '+str(result9_5)+'μg/L'))
+                         TextSendMessage(text='更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(result15)+'\n'+'溫度: '+str(result25)+'˚C'+'\n'+'濕度: '+str(result35)+'RH'+'\n'+'PM1: '+str(result45)+'μg/m3'+'\n'+'PM25: '+str(result55)+'μg/m3'+'\n'+'PM10: '+str(result65)+'μg/m3'+'\n'+'MQ3: '+str(result75)+'μg/L'+'\n'+'MQ10: '+str(result85)+'μg/L'+'\n'+'MQ135: '+str(result95)+'μg/L'))
      
     elif re.match('裝置位置1',message):
         location_message = LocationSendMessage(
