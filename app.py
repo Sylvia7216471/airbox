@@ -56,33 +56,33 @@ db = pymysql.connect(host='us-cdbr-east-05.cleardb.net', port='', user='b27ce87b
 
 cursor1 = db.cursor()
 cursor1.execute("SELECT * FROM device_1 ORDER BY time DESC LIMIT 1")
-result1 = cursor1.fetchone()
-result11=result1[1]
-result21=result1[2]
-result31=result1[3]
-result41=result1[4]
-result51=result1[5]
-result61=result1[6]
-result71=result1[7]
-result81=result1[8]
-result91=result1[9]
-result101=result1[10]
-result111=result1[11]
+result = cursor1.fetchone()
+result11=result[1]
+result21=result[2]
+result31=result[3]
+result41=result[4]
+result51=result[5]
+result61=result[6]
+result71=result[7]
+result81=result[8]
+result91=result[9]
+result101=result[10]
+result111=result[11]
 
 cursor2 = db.cursor()
 cursor2.execute("SELECT * FROM device_2 ORDER BY time DESC LIMIT 1")
-result2 = cursor2.fetchone()
-result12=result2[1]
-result22=result2[2]
-result32=result2[3]
-result42=result2[4]
-result52=result2[5]
-result62=result2[6]
-result72=result2[7]
-result82=result2[8]
-result92=result2[9]
-result102=result2[10]
-result112=result2[11]
+result = cursor2.fetchone()
+result12=result[1]
+result22=result[2]
+result32=result[3]
+result42=result[4]
+result52=result[5]
+result62=result[6]
+result72=result[7]
+result82=result[8]
+result92=result[9]
+result102=result[10]
+result112=result[11]
 
 cursor3 = db.cursor()
 cursor3.execute("SELECT * FROM device_3 ORDER BY time DESC LIMIT 1")
