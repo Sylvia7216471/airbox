@@ -58,7 +58,7 @@ cursor5.execute("SELECT * FROM device_5 ORDER BY time DESC LIMIT 1")
 result_5 = cursor5.fetchone()
 sequences=[1,2,3,4,5,6,7,8,9,10,11]
 for i in sequences:
- result5_[i]=result_5[i]
+ result5_i=result_5[i]
 db.close()
 
 #訊息傳遞區塊
