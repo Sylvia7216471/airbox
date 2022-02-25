@@ -230,25 +230,25 @@ def handle_message(event):
                           TextSendMessage(text='溫度:\n濕度:\n懸浮粒子(ug/m3)\nPM1:\nPM2.5:\nPM10:\n氣體感測\nMQ3:(ug/L)\nMQ7:(ppm)\nMQ135:(ppm)'))
     elif re.match('環境資料5',message):
         line_bot_api.push_message(yourID, 
-                         TextSendMessage(text='更新時間:+'(str(datetime_format))))
+                         TextSendMessage(text='更新時間:'+str(datetime_format)))
         line_bot_api.push_message(yourID, 
-                          TextSendMessage(text='測量時間:'+(str(result1))))
+                          TextSendMessage(text='測量時間:'+str(result1)))
         line_bot_api.push_message(yourID, 
-                          TextSendMessage(text='溫度:'+(str(result2))))
+                          TextSendMessage(text='溫度:'+str(result2)))
         line_bot_api.push_message(yourID, 
-                          TextSendMessage(text='濕度:'+(str(result3))))
+                          TextSendMessage(text='濕度:'+str(result3)))
         line_bot_api.push_message(yourID, 
-                          TextSendMessage(text='PM1:'+(str(result4))))  
+                          TextSendMessage(text='PM1:'+str(result4)))  
         line_bot_api.push_message(yourID, 
-                          TextSendMessage(text='PM25:'+(str(result5))))    
+                          TextSendMessage(text='PM25:'+str(result5)))    
         line_bot_api.push_message(yourID, 
-                          TextSendMessage(text='PM10:'+(str(result6))))    
+                          TextSendMessage(text='PM10:'+str(result6)))   
         line_bot_api.push_message(yourID, 
-                          TextSendMessage(text='MQ3:'+(str(result7))))    
+                          TextSendMessage(text='MQ3:'+str(result7)))    
         line_bot_api.push_message(yourID, 
-                          TextSendMessage(text='MQ7:'+(str(result8))))   
+                          TextSendMessage(text='MQ7:'+str(result8)))   
         line_bot_api.push_message(yourID, 
-                          TextSendMessage(text='MQ135:'+(str(result9))))
+                          TextSendMessage(text='MQ135:'+str(result9)))
     elif re.match('裝置位置1',message):
         location_message = LocationSendMessage(
             title='裝置1目前的所在位置',
