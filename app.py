@@ -232,23 +232,23 @@ def handle_message(event):
         line_bot_api.push_message(yourID, 
                          TextSendMessage(text='更新時間:+'(str(datetime_format))))
         line_bot_api.push_message(yourID, 
-                          TextSendMessage(text='測量時間:'+str(result1)))
+                          TextSendMessage(text='測量時間:'+(str(result1))))
         line_bot_api.push_message(yourID, 
-                          TextSendMessage(text='溫度:'+str(result2)))
+                          TextSendMessage(text='溫度:'+(str(result2))))
         line_bot_api.push_message(yourID, 
-                          TextSendMessage(text='濕度:'+str(result3)))
+                          TextSendMessage(text='濕度:'+(str(result3))))
         line_bot_api.push_message(yourID, 
-                          TextSendMessage(text='PM1:'+str(result4)))    
+                          TextSendMessage(text='PM1:'+(str(result4))))  
         line_bot_api.push_message(yourID, 
-                          TextSendMessage(text='PM25:'+str(result5)))    
+                          TextSendMessage(text='PM25:'+(str(result5))))    
         line_bot_api.push_message(yourID, 
-                          TextSendMessage(text='PM10:'+str(result6)))    
+                          TextSendMessage(text='PM10:'+(str(result6))))    
         line_bot_api.push_message(yourID, 
-                          TextSendMessage(text='MQ3:'+str(result7)))    
+                          TextSendMessage(text='MQ3:'+(str(result7))))    
         line_bot_api.push_message(yourID, 
-                          TextSendMessage(text='MQ7:'+str(result8)))    
+                          TextSendMessage(text='MQ7:'+(str(result8))))   
         line_bot_api.push_message(yourID, 
-                          TextSendMessage(text='MQ135:'+str(result9)))
+                          TextSendMessage(text='MQ135:'+(str(result9))))
     elif re.match('裝置位置1',message):
         location_message = LocationSendMessage(
             title='裝置1目前的所在位置',
@@ -285,8 +285,8 @@ def handle_message(event):
         location_message = LocationSendMessage(
             title='裝置5目前的所在位置',
             address='總統府',
-            latitude=result10,
-            longitude=result12
+            latitude=float(result10),
+            longitude=float(result12)
         )
         line_bot_api.reply_message(event.reply_token,location_message)
     elif re.match('環境影像1',message):
