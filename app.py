@@ -1,4 +1,3 @@
-
 # -*- coding: utf-8 -*-
 """
 Created on Wed Jun  2 21:16:35 2021
@@ -25,8 +24,6 @@ app = Flask(__name__)
 import os
 import datetime
 import pymysql
-import time
-from datetime import date
 
 # 必須放上自己的Channel Access Token
 line_bot_api = LineBotApi('0ZtGtrSOwbENt1n2Z0cehZ610JCO8aaojjiqtyOJlpt1/M85m3UpKTWiEpfmx+2vhLTgSLwnFe8DRpUQBsWjTWNUhG5O9KnlAbF7IIYWbPYKh+CLZ9E0c9H4FG0bCfGdpcbajZ42KRQgmexjrNbQzQdB04t89/1O/w1cDnyilFU=')
@@ -55,11 +52,7 @@ def callback():
     return 'OK'
 
 #資料庫連線設定
-#可縮寫db = pymysql.connect("localhost","root","root","30days" )
-db = pymysql.connect(host='120.119.157.238', port=1801, user='LiRu', passwd='', database = "iot")
-cursor = db.cursor()
-#cursor.execute("SELECT time FROM device_5")
-cursor.execute("SELECT * FROM device_5 ORDER BY time DESC LIMIT 1")
+db = pymysql.connect(host='us-cdbr-east-05.cleardb.net', port='', user='b27ce87b980a11', passwd='167961db', database = "heroku_5ce6e6298fde0f2")
 result = cursor.fetchone()
 print(result)
 result1=result[1]
@@ -73,31 +66,6 @@ result8=result[8]
 result9=result[9]
 result10=result[10]
 result12=result[11]
-db.close()
-
-db = pymysql.connect(host='us-cdbr-east-05.cleardb.net', port='', user='b27ce87b980a11', passwd='167961db', database = "heroku_5ce6e6298fde0f2")
-#建立操作游標
-cursor = db.cursor()
-#sql="INSERT INTO device_5 (time) VALUES (result1)"
-result11 = date.strftime(result1,"%Y-%m-%d %H:%M:%S")
-sql="INSERT INTO"" device_5" "(time,temperature,humidity,PM1,PM25,PM10,MQ3,MQ7,MQ135,latitude,longitude) VALUES ('"+result11+ "','" + str(result2)+ "','" + str(result3)+ "','" + str(result4)+ "','" + str(result5)+ "','" + str(result6)+ "','" + str(result7)+ "','" + str(result8)+ "','" + str(result9)+"','" +str(result10)+ "','"+str(result12)+"')"
-cursor.execute(sql)
-#print(result5)
-db.commit()
-cursor.execute("SELECT * FROM device_5 ORDER BY time DESC LIMIT 1")
-resulta = cursor.fetchone()
-result1a=resulta[1]
-result2a=resulta[2]
-result3a=resulta[3]
-result4a=resulta[4]
-result5a=resulta[5]
-result6a=resulta[6]
-result7a=resulta[7]
-result8a=resulta[8]
-result9a=resulta[9]
-result10a=resulta[10]
-result12a=resulta[11]
-#關閉連線
 db.close()
 
 #訊息傳遞區塊
@@ -222,9 +190,9 @@ def handle_message(event):
         line_bot_api.push_message(yourID, 
                           TextSendMessage(str(datetime_format)))
         line_bot_api.push_message(yourID, 
-                          TextSendMessage(text='測量時間:'+str(result1a)))
+                          TextSendMessage(text='測量時間:'+str(result1)))
         line_bot_api.push_message(yourID, 
-                          TextSendMessage(text='溫度:'+str(result2a)))                     
+                          TextSendMessage(text='溫度:'+str(result2)))                     
     elif re.match('環境資料2',message):
         line_bot_api.push_message(yourID, 
                          TextSendMessage(text='更新時間:'))
