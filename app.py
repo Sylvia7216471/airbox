@@ -70,7 +70,7 @@ result101=result1[10]
 result111=result1[11]
 
 cursor2 = db.cursor()
-cursor2.execute("SELECT * FROM device_5 ORDER BY time DESC LIMIT 1")
+cursor2.execute("SELECT * FROM device_2 ORDER BY time DESC LIMIT 1")
 result2 = cursor2.fetchone()
 result12=result2[1]
 result22=result2[2]
