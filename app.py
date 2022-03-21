@@ -163,7 +163,11 @@ def handle_message(event):
                              MessageTemplateAction(
                                label='環境影像1',
                                text='環境影像1'
-                            )
+                            ),
+                             MessageTemplateAction(
+                               label='動態影像1',
+                               uri='http://192.168.0.4:9601/stream'
+                             )
                         ]
                     ),
                     CarouselColumn(
@@ -182,7 +186,11 @@ def handle_message(event):
                              MessageTemplateAction(
                                label='環境影像2',
                                text='環境影像2'
-                            )
+                            ),
+                               MessageTemplateAction(
+                               label='動態影像2',
+                               uri='http://192.168.0.6:9601/stream'
+                             )
                         ]
                     ),
                      CarouselColumn(
@@ -201,7 +209,11 @@ def handle_message(event):
                              MessageTemplateAction(
                                label='環境影像3',
                                text='環境影像3'
-                            )
+                            ),
+                             MessageTemplateAction(
+                               label='動態影像3',
+                               uri='http://192.168.0.8:9601/stream'
+                             )
                         ]
                     ),
                      CarouselColumn(
@@ -220,7 +232,11 @@ def handle_message(event):
                              MessageTemplateAction(
                                label='環境影像4',
                                text='環境影像4'
-                            )
+                            ),
+                              MessageTemplateAction(
+                               label='動態影像4',
+                               uri='http://192.168.0.10:9601/stream'
+                             )
                         ]
                     ),
                     CarouselColumn(
@@ -239,7 +255,11 @@ def handle_message(event):
                              MessageTemplateAction(
                                label='環境影像5',
                                text='環境影像5'
-                            )
+                            ),
+                             MessageTemplateAction(
+                               label='動態影像5',
+                               uri='http://192.168.0.12:9601/stream'
+                             )
                         ]
                     )
                 ]
@@ -333,7 +353,7 @@ def handle_message(event):
         preview_image_url='https://media.istockphoto.com/illustrations/tapir-illustration-id1128835465?k=20&m=1128835465&s=612x612&w=0&h=o5rGp2t8zFGLj_BrSqWes-d1DqeWtM3Z-_rQU73jfzA='
         )
         line_bot_api.reply_message(event.reply_token, image_message)
-    
+
         
 #主程式
 import os
