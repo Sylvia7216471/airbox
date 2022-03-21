@@ -164,7 +164,7 @@ def handle_message(event):
                                label='環境影像1',
                                text='環境影像1'
                             ),
-                             MessageTemplateAction(
+                             URITemplateAction(
                                label='動態影像1',
                                uri='http://192.168.0.4:9601/stream'
                              )
@@ -187,7 +187,7 @@ def handle_message(event):
                                label='環境影像2',
                                text='環境影像2'
                             ),
-                               MessageTemplateAction(
+                               URITemplateAction(
                                label='動態影像2',
                                uri='http://192.168.0.6:9601/stream'
                              )
@@ -210,7 +210,7 @@ def handle_message(event):
                                label='環境影像3',
                                text='環境影像3'
                             ),
-                             MessageTemplateAction(
+                             URITemplateAction(
                                label='動態影像3',
                                uri='http://192.168.0.8:9601/stream'
                              )
@@ -233,7 +233,7 @@ def handle_message(event):
                                label='環境影像4',
                                text='環境影像4'
                             ),
-                              MessageTemplateAction(
+                             URITemplateAction(
                                label='動態影像4',
                                uri='http://192.168.0.10:9601/stream'
                              )
@@ -256,7 +256,7 @@ def handle_message(event):
                                label='環境影像5',
                                text='環境影像5'
                             ),
-                             MessageTemplateAction(
+                             URITemplateAction(
                                label='動態影像5',
                                uri='http://192.168.0.12:9601/stream'
                              )
