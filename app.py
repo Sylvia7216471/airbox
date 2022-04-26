@@ -62,6 +62,7 @@ result21=result1[2]
 result31=result1[3]
 result41=result1[4]
 result51=result1[5]
+if(result51 <=50) result121='良好'
 result61=result1[6]
 result71=result1[7]
 result81=result1[8]
@@ -129,6 +130,7 @@ result95=result5[9]
 result105=result5[10]
 result115=result5[11]
 
+ 
 db.close()
 
 #訊息傳遞區塊
@@ -249,7 +251,7 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, carousel_template_message)
     elif re.match('環境資料1',message):
         line_bot_api.push_message(yourID, 
-                         TextSendMessage(text='更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(result11)+'\n'+'溫度: '+str(result21)+'˚C'+'\n'+'濕度: '+str(result31)+'RH'+'\n'+'PM1: '+str(result41)+'μg/m3'+'\n'+'PM25: '+str(result51)+'μg/m3'+'\n'+'PM10: '+str(result61)+'μg/m3'+'\n'+'MQ3: '+str(result71)+'μg/L'+'\n'+'MQ10: '+str(result81)+'μg/L'+'\n'+'MQ135: '+str(result91)+'μg/L')) 
+                         TextSendMessage(text='更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(result11)+'\n'+'溫度: '+str(result21)+'˚C'+'\n'+'濕度: '+str(result31)+'RH'+'\n'+'PM1: '+str(result41)+'μg/m3'+'\n'+'PM25: '+str(result51)+'μg/m3'-(result121)'+'\n'+'PM10: '+str(result61)+'μg/m3'+'\n'+'MQ3: '+str(result71)+'μg/L'+'\n'+'MQ10: '+str(result81)+'μg/L'+'\n'+'MQ135: '+str(result91)+'μg/L')) 
     elif re.match('環境資料2',message):
         line_bot_api.push_message(yourID, 
                          TextSendMessage(text='更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(result12)+'\n'+'溫度: '+str(result22)+'˚C'+'\n'+'濕度: '+str(result32)+'RH'+'\n'+'PM1: '+str(result42)+'μg/m3'+'\n'+'PM25: '+str(result52)+'μg/m3'+'\n'+'PM10: '+str(result62)+'μg/m3'+'\n'+'MQ3: '+str(result72)+'μg/L'+'\n'+'MQ10: '+str(result82)+'μg/L'+'\n'+'MQ135: '+str(result92)+'μg/L'))
