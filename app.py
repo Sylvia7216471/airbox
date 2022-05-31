@@ -79,7 +79,7 @@ result91=result1[9]
 result101=result1[10]
 result111=result1[11]
 
-sequences = [5,6,7,8,9]
+sequences = [4,5,6,7,8,9]
 for i in sequences:
    value=aqi(result1[i])
    aqi_i=value
@@ -88,6 +88,7 @@ for i in sequences:
    point13=aqi_i
    point14=aqi_i
    point15=aqi_i
+   point16=aqi_i
 
 cursor2 = db.cursor()
 cursor2.execute("SELECT * FROM device_2 ORDER BY time DESC LIMIT 1")
@@ -291,7 +292,7 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, carousel_template_message)
     elif re.match('環境資料1',message):
         line_bot_api.push_message(yourID, 
-                         TextSendMessage(text='更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(result11)+'\n'+'溫度: '+str(result21)+'˚C'+'\n'+'濕度: '+str(result31)+'RH'+'\n'+'PM1: '+str(result41)+'μg/m3'+'\n'+'PM25: '+str(result51)+'μg/m3'+str(point11)+'\n'+'PM10: '+str(result61)+'μg/m3'+str(point12)+'\n'+'MQ3: '+str(result71)+'μg/L'+str(point13)+'\n'+'MQ10: '+str(result81)+'μg/L'+str(point14)+'\n'+'MQ135: '+str(result91)+'μg/L'+str(point15))) 
+                         TextSendMessage(text='更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(result11)+'\n'+'溫度: '+str(result21)+'˚C'+'\n'+'濕度: '+str(result31)+'RH'+'\n'+'PM1: '+str(result41)+'μg/m3'+str(point11)+'\n'+'PM25: '+str(result51)+'μg/m3'+str(point12)+'\n'+'PM10: '+str(result61)+'μg/m3'+str(point13)+'\n'+'MQ3: '+str(result71)+'μg/L'+str(point14)+'\n'+'MQ10: '+str(result81)+'μg/L'+str(point15)+'\n'+'MQ135: '+str(result91)+'μg/L'+str(point16))) 
     elif re.match('環境資料2',message):
         line_bot_api.push_message(yourID, 
                          TextSendMessage(text='更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(result12)+'\n'+'溫度: '+str(result22)+'˚C'+'\n'+'濕度: '+str(result32)+'RH'+'\n'+'PM1: '+str(result42)+'μg/m3'+'\n'+'PM25: '+str(result52)+'μg/m3'+'\n'+'PM10: '+str(result62)+'μg/m3'+'\n'+'MQ3: '+str(result72)+'μg/L'+'\n'+'MQ10: '+str(result82)+'μg/L'+'\n'+'MQ135: '+str(result92)+'μg/L'))
