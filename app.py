@@ -79,16 +79,12 @@ result91=result1[9]
 result101=result1[10]
 result111=result1[11]
 
-sequences = [4,5,6,7,8,9]
-for i in sequences:
-   value=aqi(result1[i])
-   aqi_i=value
-   point11=aqi_i
-   point12=aqi_i
-   point13=aqi_i
-   point14=aqi_i
-   point15=aqi_i
-   point16=aqi_i
+point11=aqi(result1[4])
+point12=aqi(result1[5])
+point13=aqi(result1[6])
+point14=aqi(result1[7])
+point15=aqi(result1[8])
+point16=aqi(result1[9])
 
 cursor2 = db.cursor()
 cursor2.execute("SELECT * FROM device_2 ORDER BY time DESC LIMIT 1")
@@ -105,16 +101,12 @@ result92=result2[9]
 result102=result2[10]
 result112=result2[11]
 
-sequences = [4,5,6,7,8,9]
-for i in sequences:
-   value2=aqi(result2[i])
-   aqi_i=value2
-   point21=aqi_i
-   point22=aqi_i
-   point23=aqi_i
-   point24=aqi_i
-   point25=aqi_i
-   point26=aqi_i
+point11=aqi(result2[4])
+point12=aqi(result2[5])
+point13=aqi(result2[6])
+point14=aqi(result2[7])
+point15=aqi(result2[8])
+point16=aqi(result2[9])
 
 
 cursor3 = db.cursor()
@@ -132,16 +124,12 @@ result93=result3[9]
 result103=result3[10]
 result113=result3[11]
 
-sequences = [4,5,6,7,8,9]
-for i in sequences:
-   value3=aqi(result3[i])
-   aqi_i=value3
-   point31=aqi_i
-   point32=aqi_i
-   point33=aqi_i
-   point34=aqi_i
-   point35=aqi_i
-   point36=aqi_i
+point11=aqi(result3[4])
+point12=aqi(result3[5])
+point13=aqi(result3[6])
+point14=aqi(result3[7])
+point15=aqi(result3[8])
+point16=aqi(result3[9])
 
 cursor4 = db.cursor()
 cursor4.execute("SELECT * FROM device_4 ORDER BY time DESC LIMIT 1")
@@ -158,16 +146,12 @@ result94=result4[9]
 result104=result4[10]
 result114=result4[11]
 
-sequences = [4,5,6,7,8,9]
-for i in sequences:
-   value4=aqi(result4[i])
-   aqi_i=value4
-   point41=aqi_i
-   point42=aqi_i
-   point43=aqi_i
-   point44=aqi_i
-   point45=aqi_i
-   point46=aqi_i
+point11=aqi(result4[4])
+point12=aqi(result4[5])
+point13=aqi(result4[6])
+point14=aqi(result4[7])
+point15=aqi(result4[8])
+point16=aqi(result4[9])
 
 cursor5 = db.cursor()
 cursor5.execute("SELECT * FROM device_5 ORDER BY time DESC LIMIT 1")
@@ -184,16 +168,13 @@ result95=result5[9]
 result105=result5[10]
 result115=result5[11]
 
-sequences = [4,5,6,7,8,9]
-for i in sequences:
-   value5=aqi(result5[i])
-   aqi_i=value5
-   point51=aqi_i
-   point52=aqi_i
-   point53=aqi_i
-   point54=aqi_i
-   point55=aqi_i
-   point56=aqi_i
+point11=aqi(result5[4])
+point12=aqi(result5[5])
+point13=aqi(result5[6])
+point14=aqi(result5[7])
+point15=aqi(result5[8])
+point16=aqi(result5[9])
+
 ############################################歷史資料第1筆###############################################
 cursor11 = db.cursor()
 cursor11.execute("SELECT * FROM device_1 ORDER BY time DESC LIMIT 1,1")
