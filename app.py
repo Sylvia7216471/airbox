@@ -107,8 +107,8 @@ result112=result2[11]
 
 sequences = [4,5,6,7,8,9]
 for i in sequences:
-   value=aqi(result2[i])
-   aqi_i=value
+   value2=aqi(result2[i])
+   aqi_i=value2
    point21=aqi_i
    point22=aqi_i
    point23=aqi_i
@@ -134,8 +134,8 @@ result113=result3[11]
 
 sequences = [4,5,6,7,8,9]
 for i in sequences:
-   value=aqi(result3[i])
-   aqi_i=value
+   value3=aqi(result3[i])
+   aqi_i=value3
    point31=aqi_i
    point32=aqi_i
    point33=aqi_i
@@ -160,8 +160,8 @@ result114=result4[11]
 
 sequences = [4,5,6,7,8,9]
 for i in sequences:
-   value=aqi(result4[i])
-   aqi_i=value
+   value4=aqi(result4[i])
+   aqi_i=value4
    point41=aqi_i
    point42=aqi_i
    point43=aqi_i
@@ -186,14 +186,14 @@ result115=result5[11]
 
 sequences = [4,5,6,7,8,9]
 for i in sequences:
-   value=aqi(result5[i])
-   aqi_i=value
-   point11=aqi_i
-   point12=aqi_i
-   point13=aqi_i
-   point14=aqi_i
-   point15=aqi_i
-   point16=aqi_i
+   value5=aqi(result5[i])
+   aqi_i=value5
+   point51=aqi_i
+   point52=aqi_i
+   point53=aqi_i
+   point54=aqi_i
+   point55=aqi_i
+   point56=aqi_i
 
  
 db.close()
