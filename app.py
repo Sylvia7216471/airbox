@@ -771,28 +771,28 @@ def handle_message(event):
 
     elif re.match('裝置一前第一筆資料',message):
         line_bot_api.push_message(yourID, 
-                         TextSendMessage(text='更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(frist11)+'\n'+'溫度: '+str(frist21)+'˚C'+'\n'+'濕度: '+str(frist31)+'RH'+'\n'+'PM1: '+str(frist41)+'μg/m3'+'\n'+'PM25: '+str(frist51)+'μg/m3'+'\n'+'PM10: '+str(frist61)+'μg/m3'+'\n'+'MQ3: '+str(frist71)+'μg/L'+'\n'+'MQ10: '+str(frist81)+'μg/L'+'\n'+'MQ135: '+str(frist91)+'μg/L')) 
+                         TextSendMessage(text='更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(frist11)+'\n'+'溫度: '+str(frist21)+'˚C'+'\n'+'濕度: '+str(frist31)+'RH'+'\n'+'PM1: '+str(frist41)+'μg/m3'+'\n'+'MQ3: '+str(frist51)+'μg/L'+'\n'+'MQ7: '+str(frist61)+'μg/L'+'\n'+'MQ135: '+str(frist71)+'μg/L'+'\n'+'PM25: '+str(frist81)+'μg/m3'+'\n'+'PM10: '+str(frist91)+'μg/m3')) 
     elif re.match('裝置一前第二筆資料',message):
         line_bot_api.push_message(yourID, 
-                         TextSendMessage(text='更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(second11)+'\n'+'溫度: '+str(second21)+'˚C'+'\n'+'濕度: '+str(second31)+'RH'+'\n'+'PM1: '+str(second41)+'μg/m3'+'\n'+'PM25: '+str(second51)+'μg/m3'+'\n'+'PM10: '+str(second61)+'μg/m3'+'\n'+'MQ3: '+str(second71)+'μg/L'+'\n'+'MQ10: '+str(second81)+'μg/L'+'\n'+'MQ135: '+str(second91)+'μg/L'))
+                         TextSendMessage(text='更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(second11)+'\n'+'溫度: '+str(second21)+'˚C'+'\n'+'濕度: '+str(second31)+'RH'+'\n'+'PM1: '+str(second41)+'μg/m3'+'\n'+'MQ3: '+str(second51)+'μg/L'+'\n'+'MQ7: '+str(second61)+'μg/L'+'\n'+'MQ135: '+str(second71)+'μg/L'+'\n'+'PM25: '+str(second81)+'μg/m3'+'\n'+'PM10: '+str(second91)+'μg/m3'))
     elif re.match('裝置一前第三筆資料',message):
           line_bot_api.push_message(yourID, 
-                         TextSendMessage(text='更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(third11)+'\n'+'溫度: '+str(third21)+'˚C'+'\n'+'濕度: '+str(third31)+'RH'+'\n'+'PM1: '+str(third41)+'μg/m3'+'\n'+'PM25: '+str(third51)+'μg/m3'+'\n'+'PM10: '+str(third61)+'μg/m3'+'\n'+'MQ3: '+str(third71)+'μg/L'+'\n'+'MQ10: '+str(third81)+'μg/L'+'\n'+'MQ135: '+str(third91)+'μg/L'))
+                         TextSendMessage(text='更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(third11)+'\n'+'溫度: '+str(third21)+'˚C'+'\n'+'濕度: '+str(third31)+'RH'+'\n'+'PM1: '+str(third41)+'μg/m3'+'\n'+'MQ3: '+str(third51)+'μg/L'+'\n'+'MQ7: '+str(third61)+'μg/L'+'\n'+'MQ135: '+str(third71)+'μg/L'+'\n'+'PM25: '+str(third81)+'μg/m3'+'\n'+'PM10: '+str(third91)+'μg/m3'))
     elif re.match('裝置二前第一筆資料',message):
         line_bot_api.push_message(yourID, 
-                         TextSendMessage(text='更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(frist12)+'\n'+'溫度: '+str(frist22)+'˚C'+'\n'+'濕度: '+str(frist32)+'RH'+'\n'+'PM1: '+str(frist42)+'μg/m3'+'\n'+'PM25: '+str(frist52)+'μg/m3'+'\n'+'PM10: '+str(frist62)+'μg/m3'+'\n'+'MQ3: '+str(frist72)+'μg/L'+'\n'+'MQ10: '+str(frist82)+'μg/L'+'\n'+'MQ135: '+str(frist92)+'μg/L')) 
+                         TextSendMessage(text='更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(frist12)+'\n'+'溫度: '+str(frist22)+'˚C'+'\n'+'濕度: '+str(frist32)+'RH'+'\n'+'PM1: '+str(frist42)+'μg/m3'+'\n'+'MQ3: '+str(frist52)+'μg/L'+'\n'+'MQ7: '+str(frist62)+'μg/L'+'\n'+'MQ135: '+str(frist72)+'μg/L'+'\n'+'PM25: '+str(frist82)+'μg/m3'+'\n'+'PM10: '+str(frist92)+'μg/m3')) 
     elif re.match('裝置二前第二筆資料',message):
         line_bot_api.push_message(yourID, 
-                         TextSendMessage(text='更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(second12)+'\n'+'溫度: '+str(second22)+'˚C'+'\n'+'濕度: '+str(second32)+'RH'+'\n'+'PM1: '+str(second42)+'μg/m3'+'\n'+'PM25: '+str(second52)+'μg/m3'+'\n'+'PM10: '+str(second62)+'μg/m3'+'\n'+'MQ3: '+str(second72)+'μg/L'+'\n'+'MQ10: '+str(second82)+'μg/L'+'\n'+'MQ135: '+str(second92)+'μg/L'))
+                         TextSendMessage(text='更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(second12)+'\n'+'溫度: '+str(second22)+'˚C'+'\n'+'濕度: '+str(second32)+'RH'+'\n'+'PM1: '+str(second42)+'μg/m3'+'\n'+'MQ3: '+str(second52)+'μg/L'+'\n'+'MQ7: '+str(second62)+'μg/L'+'\n'+'MQ135: '+str(second72)+'μg/L'+'\n'+'PM25: '+str(second82)+'μg/m3'+'\n'+'PM10: '+str(second92)+'μg/m3'))
     elif re.match('裝置二前第三筆資料',message):
           line_bot_api.push_message(yourID, 
-                         TextSendMessage(text='更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(third12)+'\n'+'溫度: '+str(third22)+'˚C'+'\n'+'濕度: '+str(third32)+'RH'+'\n'+'PM1: '+str(third42)+'μg/m3'+'\n'+'PM25: '+str(third52)+'μg/m3'+'\n'+'PM10: '+str(third62)+'μg/m3'+'\n'+'MQ3: '+str(third72)+'μg/L'+'\n'+'MQ10: '+str(third82)+'μg/L'+'\n'+'MQ135: '+str(third92)+'μg/L'))
+                         TextSendMessage(text='更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(third12)+'\n'+'溫度: '+str(third22)+'˚C'+'\n'+'濕度: '+str(third32)+'RH'+'\n'+'PM1: '+str(third42)+'μg/m3'+'\n'+'MQ3: '+str(third52)+'μg/L'+'\n'+'MQ7: '+str(third62)+'μg/L'+'\n'+'MQ135: '+str(third72)+'μg/L'+'\n'+'PM25: '+str(third82)+'μg/m3'+'\n'+'PM10: '+str(third92)+'μg/m3'))
     elif re.match('裝置三前第一筆資料',message):
         line_bot_api.push_message(yourID, 
-                         TextSendMessage(text='更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(frist13)+'\n'+'溫度: '+str(frist23)+'˚C'+'\n'+'濕度: '+str(frist33)+'RH'+'\n'+'PM1: '+str(frist43)+'μg/m3'+'\n'+'PM25: '+str(frist53)+'μg/m3'+'\n'+'PM10: '+str(frist63)+'μg/m3'+'\n'+'MQ3: '+str(frist73)+'μg/L'+'\n'+'MQ10: '+str(frist83)+'μg/L'+'\n'+'MQ135: '+str(frist93)+'μg/L')) 
+                         TextSendMessage(text='更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(frist13)+'\n'+'溫度: '+str(frist23)+'˚C'+'\n'+'濕度: '+str(frist33)+'RH'+'\n'+'PM1: '+str(frist43)+'μg/m3'+'\n'+'MQ3: '+str(frist53)+'μg/L'+'\n'+'MQ7: '+str(frist63)+'μg/L'+'\n'+'MQ135: '+str(frist73)+'μg/L'+'\n'+'PM25: '+str(frist83)+'μg/m3'+'\n'+'PM10: '+str(frist93)+'μg/m3')) 
     elif re.match('裝置三前第二筆資料',message):
         line_bot_api.push_message(yourID, 
-                         TextSendMessage(text='更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(second13)+'\n'+'溫度: '+str(second23)+'˚C'+'\n'+'濕度: '+str(second33)+'RH'+'\n'+'PM1: '+str(second43)+'μg/m3'+'\n'+'PM25: '+str(second53)+'μg/m3'+'\n'+'PM10: '+str(second63)+'μg/m3'+'\n'+'MQ3: '+str(second73)+'μg/L'+'\n'+'MQ10: '+str(second83)+'μg/L'+'\n'+'MQ135: '+str(second93)+'μg/L'))
+                         TextSendMessage(text='更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(second13)+'\n'+'溫度: '+str(second23)+'˚C'+'\n'+'濕度: '+str(second33)+'RH'+'\n'+'PM1: '+str(second43)+'μg/m3'+'\n'+'MQ3: '+str(second53)+'μg/L'+'\n'+'MQ7: '+str(second63)+'μg/L'+'\n'+'MQ135: '+str(second73)+'μg/L'+'\n'+'PM25: '+str(second83)+'μg/m3'+'\n'+'PM10: '+str(second93)+'μg/m3'))
     elif re.match('裝置三前第三筆資料',message):
           line_bot_api.push_message(yourID, 
                          TextSendMessage(text='更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(third13)+'\n'+'溫度: '+str(third23)+'˚C'+'\n'+'濕度: '+str(third33)+'RH'+'\n'+'PM1: '+str(third43)+'μg/m3'+'\n'+'PM25: '+str(third53)+'μg/m3'+'\n'+'PM10: '+str(third63)+'μg/m3'+'\n'+'MQ3: '+str(third73)+'μg/L'+'\n'+'MQ10: '+str(third83)+'μg/L'+'\n'+'MQ135: '+str(third93)+'μg/L'))
