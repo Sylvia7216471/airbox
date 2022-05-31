@@ -101,12 +101,12 @@ result92=result2[9]
 result102=result2[10]
 result112=result2[11]
 
-point11=aqi(result2[4])
-point12=aqi(result2[5])
-point13=aqi(result2[6])
-point14=aqi(result2[7])
-point15=aqi(result2[8])
-point16=aqi(result2[9])
+point21=aqi(result2[4])
+point22=aqi(result2[5])
+point23=aqi(result2[6])
+point24=aqi(result2[7])
+point25=aqi(result2[8])
+point26=aqi(result2[9])
 
 
 cursor3 = db.cursor()
@@ -124,12 +124,12 @@ result93=result3[9]
 result103=result3[10]
 result113=result3[11]
 
-point11=aqi(result3[4])
-point12=aqi(result3[5])
-point13=aqi(result3[6])
-point14=aqi(result3[7])
-point15=aqi(result3[8])
-point16=aqi(result3[9])
+point31=aqi(result3[4])
+point32=aqi(result3[5])
+point33=aqi(result3[6])
+point34=aqi(result3[7])
+point35=aqi(result3[8])
+point36=aqi(result3[9])
 
 cursor4 = db.cursor()
 cursor4.execute("SELECT * FROM device_4 ORDER BY time DESC LIMIT 1")
@@ -146,12 +146,12 @@ result94=result4[9]
 result104=result4[10]
 result114=result4[11]
 
-point11=aqi(result4[4])
-point12=aqi(result4[5])
-point13=aqi(result4[6])
-point14=aqi(result4[7])
-point15=aqi(result4[8])
-point16=aqi(result4[9])
+point41=aqi(result4[4])
+point42=aqi(result4[5])
+point43=aqi(result4[6])
+point44=aqi(result4[7])
+point45=aqi(result4[8])
+point46=aqi(result4[9])
 
 cursor5 = db.cursor()
 cursor5.execute("SELECT * FROM device_5 ORDER BY time DESC LIMIT 1")
@@ -168,12 +168,12 @@ result95=result5[9]
 result105=result5[10]
 result115=result5[11]
 
-point11=aqi(result5[4])
-point12=aqi(result5[5])
-point13=aqi(result5[6])
-point14=aqi(result5[7])
-point15=aqi(result5[8])
-point16=aqi(result5[9])
+point51=aqi(result5[4])
+point52=aqi(result5[5])
+point53=aqi(result5[6])
+point54=aqi(result5[7])
+point55=aqi(result5[8])
+point56=aqi(result5[9])
 
 ############################################歷史資料第1筆###############################################
 cursor11 = db.cursor()
