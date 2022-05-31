@@ -51,8 +51,18 @@ def callback():
 
     return 'OK'
 
+
+
 #資料庫連線設定
 db = pymysql.connect(host='us-cdbr-east-05.cleardb.net', port='', user='b27ce87b980a11', passwd='167961db', database = "heroku_5ce6e6298fde0f2")
+
+def aqi(num):
+    if(num <=50): aqi1 ='良好'
+    elif(num > 50 & num <= 100):aqi1 ='普通'
+    elif(num >100 & num <= 150):aqi1='不良'
+    elif(num >150 & num <= 200):aqi1 ='不健康'
+    elif(num >200 ):aqi1 ='危害'
+    return aqi1
 
 cursor1 = db.cursor()
 cursor1.execute("SELECT * FROM device_1 ORDER BY time DESC LIMIT 1")
@@ -62,13 +72,18 @@ result21=result1[2]
 result31=result1[3]
 result41=result1[4]
 result51=result1[5]
-if(result51 <=50) result121='良好'
 result61=result1[6]
 result71=result1[7]
 result81=result1[8]
 result91=result1[9]
 result101=result1[10]
 result111=result1[11]
+
+sequences = [5,6,7,8,9]
+for i in sequences:
+   value=aqi(result1[i])
+   aqi1_i=value
+
 
 cursor2 = db.cursor()
 cursor2.execute("SELECT * FROM device_2 ORDER BY time DESC LIMIT 1")
@@ -85,6 +100,12 @@ result92=result2[9]
 result102=result2[10]
 result112=result2[11]
 
+sequences = [5,6,7,8,9]
+for i in sequences:
+   value=aqi(result2[i])
+   aqi2_i=value
+
+
 cursor3 = db.cursor()
 cursor3.execute("SELECT * FROM device_3 ORDER BY time DESC LIMIT 1")
 result3 = cursor3.fetchone()
@@ -99,6 +120,11 @@ result83=result3[8]
 result93=result3[9]
 result103=result3[10]
 result113=result3[11]
+
+sequences = [5,6,7,8,9]
+for i in sequences:
+   value=aqi(result3[i])
+   aqi3_i=value
 
 cursor4 = db.cursor()
 cursor4.execute("SELECT * FROM device_4 ORDER BY time DESC LIMIT 1")
@@ -115,6 +141,11 @@ result94=result4[9]
 result104=result4[10]
 result114=result4[11]
 
+sequences = [5,6,7,8,9]
+for i in sequences:
+   value=aqi(result4[i])
+   aqi4_i=value
+
 cursor5 = db.cursor()
 cursor5.execute("SELECT * FROM device_5 ORDER BY time DESC LIMIT 1")
 result5 = cursor5.fetchone()
@@ -129,6 +160,11 @@ result85=result5[8]
 result95=result5[9]
 result105=result5[10]
 result115=result5[11]
+
+sequences = [5,6,7,8,9]
+for i in sequences:
+   value=aqi(result5[i])
+   aqi5_i=value
 
  
 db.close()
@@ -251,7 +287,7 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, carousel_template_message)
     elif re.match('環境資料1',message):
         line_bot_api.push_message(yourID, 
-                         TextSendMessage(text='更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(result11)+'\n'+'溫度: '+str(result21)+'˚C'+'\n'+'濕度: '+str(result31)+'RH'+'\n'+'PM1: '+str(result41)+'μg/m3'+'\n'+'PM25: '+str(result51)+'μg/m3'-(result121)'+'\n'+'PM10: '+str(result61)+'μg/m3'+'\n'+'MQ3: '+str(result71)+'μg/L'+'\n'+'MQ10: '+str(result81)+'μg/L'+'\n'+'MQ135: '+str(result91)+'μg/L')) 
+                         TextSendMessage(text='更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(result11)+'\n'+'溫度: '+str(result21)+'˚C'+'\n'+'濕度: '+str(result31)+'RH'+'\n'+'PM1: '+str(result41)+'μg/m3'+'\n'+'PM25: '+str(result51)+'μg/m3'+str(aqi1_5)+'\n'+'PM10: '+str(result61)+'μg/m3'+str(aqi1_6)+'\n'+'MQ3: '+str(result71)+'μg/L'+str(aqi1_7)+'\n'+'MQ10: '+str(result81)+'μg/L'+str(aqi1_8)+'\n'+'MQ135: '+str(result91)+'μg/L'+str(aqi1_9))) 
     elif re.match('環境資料2',message):
         line_bot_api.push_message(yourID, 
                          TextSendMessage(text='更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(result12)+'\n'+'溫度: '+str(result22)+'˚C'+'\n'+'濕度: '+str(result32)+'RH'+'\n'+'PM1: '+str(result42)+'μg/m3'+'\n'+'PM25: '+str(result52)+'μg/m3'+'\n'+'PM10: '+str(result62)+'μg/m3'+'\n'+'MQ3: '+str(result72)+'μg/L'+'\n'+'MQ10: '+str(result82)+'μg/L'+'\n'+'MQ135: '+str(result92)+'μg/L'))
