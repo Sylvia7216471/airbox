@@ -58,9 +58,9 @@ db = pymysql.connect(host='us-cdbr-east-05.cleardb.net', port='', user='b27ce87b
 
 def aqi(num):
     if(num <=50): aqi1 ='良好'
-    elif(num > 50 & num <= 100):aqi1 ='普通'
-    elif(num >100 & num <= 150):aqi1='不良'
-    elif(num >150 & num <= 200):aqi1 ='不健康'
+    elif(num > 50 and num <= 100):aqi1 ='普通'
+    elif(num >100 and num <= 150):aqi1='不良'
+    elif(num >150 and num <= 200):aqi1 ='不健康'
     elif(num >200 ):aqi1 ='危害'
     return aqi1
 
