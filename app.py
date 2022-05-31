@@ -421,7 +421,7 @@ def handle_message(event):
     message = text=event.message.text
     loc_dt = datetime.datetime.today() 
     time_del = datetime.timedelta(hours=8) 
-    new_dt = loc_dt + time_del 
+    new_dt = loc_dt 
     datetime_format = new_dt.strftime("%Y/%m/%d %H:%M:%S")
     loc_dt_format = loc_dt.strftime("%Y/%m/%d %H:%M:%S")
     yourID = 'Uc2c240ca992c30a49afa0a29288ee53d'
