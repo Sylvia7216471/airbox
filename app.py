@@ -82,7 +82,6 @@ result111=result1[11]
 sequences = [5,6,7,8,9]
 for i in sequences:
    value=aqi(result1[i])
-   aqi1_i=value
    point11=aqi_i
    point12=aqi_i
    point13=aqi_i
