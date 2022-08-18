@@ -464,7 +464,7 @@ def handle_message(event):
                              ),
                                URITemplateAction(
                                label='動態影像2',
-                               uri='http://192.168.0.6:9601/stream'
+                               uri='http://192.168.0.16:9601/stream'
                              )
                         ]
                     ),
@@ -483,7 +483,7 @@ def handle_message(event):
                              ),
                              URITemplateAction(
                                label='動態影像3',
-                               uri='http://192.168.0.8:9601/stream'
+                               uri='http://192.168.0.15:9601/stream'
                              )
                         ]
                     ),
@@ -502,7 +502,7 @@ def handle_message(event):
                              ),
                              URITemplateAction(
                                label='動態影像4',
-                               uri='http://192.168.0.10:9601/stream'
+                               uri='http://192.168.0.18:9601/stream'
                              )
                         ]
                     ),
@@ -521,7 +521,7 @@ def handle_message(event):
                              ),
                              URITemplateAction(
                                label='動態影像5',
-                               uri='http://192.168.0.12:9601/stream'
+                               uri='http://192.168.0.8:9601/stream'
                              )
                         ]
                     )
