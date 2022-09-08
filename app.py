@@ -57,7 +57,7 @@ def callback():
 db = pymysql.connect(host='us-cdbr-east-05.cleardb.net', port='', user='b27ce87b980a11', passwd='167961db', database = "heroku_5ce6e6298fde0f2")
 
 def aqi(num):
-    if(num <=50): aqi1 ='良好'
+    if(num <=50): aqi1 ='💚'
     elif(num > 50 and num <= 100):aqi1 ='普通'
     elif(num >100 and num <= 150):aqi1='不良'
     elif(num >150 and num <= 200):aqi1 ='不健康'
