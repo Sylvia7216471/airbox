@@ -58,10 +58,10 @@ db = pymysql.connect(host='us-cdbr-east-05.cleardb.net', port='', user='b27ce87b
 
 def aqi(num):
     if(num <=50): aqi1 ='💚'
-    elif(num > 50 and num <= 100):aqi1 ='普通'
-    elif(num >100 and num <= 150):aqi1='不良'
-    elif(num >150 and num <= 200):aqi1 ='不健康'
-    elif(num >200 ):aqi1 ='危害'
+    elif(num > 50 and num <= 100):aqi1 ='💛'
+    elif(num >100 and num <= 150):aqi1='🧡'
+    elif(num >150 and num <= 200):aqi1 ='❤️'
+    elif(num >200 ):aqi1 ='💜'
     return aqi1
 
 cursor1 = db.cursor()
@@ -532,7 +532,7 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, carousel_template_message)
     elif re.match('環境資料1',message):
         line_bot_api.push_message(yourID, 
-                         TextSendMessage(text='更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(result11)+'\n'+'溫度: '+str(result21)+'˚C'+'\n'+'濕度: '+str(result31)+'RH'+'\n'+'PM1: '+str(result41)+'μg/m3'+str(point11)+'\n'+'MQ3: '+str(result51)+'μg/L'+str(point12)+'\n'+'MQ7: '+str(result61)+'μg/L'+str(point13)+'\n'+'MQ135: '+str(result71)+'μg/L'+str(point14)+'\n'+'PM25: '+str(result81)+'μg/m3'+str(point15)+'\n'+'PM10: '+str(result91)+'μg/m3'+str(point16))) 
+                         TextSendMessage(text='更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(result11)+'\n'+'溫度: '+str(result21)+'˚C'+'\n'+'濕度: '+str(result31)+'RH'+'\n'+'PM1: '+str(result41)+'μg/m3'     +str(point11)+'\n'+'MQ3: '+str(result51)+'μg/L'     +str(point12)+'\n'+'MQ7: '+str(result61)+'μg/L'+str(point13)+'\n'+'MQ135: '+str(result71)+'μg/L'+str(point14)+'\n'+'PM25: '+str(result81)+'μg/m3'+str(point15)+'\n'+'PM10: '+str(result91)+'μg/m3'+str(point16))) 
     elif re.match('環境資料2',message):
         line_bot_api.push_message(yourID, 
                          TextSendMessage(text='更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(result12)+'\n'+'溫度: '+str(result22)+'˚C'+'\n'+'濕度: '+str(result32)+'RH'+'\n'+'PM1: '+str(result42)+'μg/m3'+str(point21)+'\n'+'MQ3: '+str(result52)+'μg/L'+str(point22)+'\n'+'MQ7: '+str(result62)+'μg/L'+str(point23)+'\n'+'MQ135: '+str(result72)+'μg/L'+str(point24)+'\n'+'PM25: '+str(result82)+'μg/L'+str(point25)+'\n'+'PM10: '+str(result92)+'μg/m3'+str(point26)))
