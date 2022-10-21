@@ -549,41 +549,37 @@ def handle_message(event):
     elif re.match('裝置位置1',message):
         location_message = LocationSendMessage(
             title='裝置1目前的所在位置',
-            address='總統府',
-            latitude=25.040213810016002,
-            longitude=121.51238385108306
+            latitude=result101,
+            longitude=result111
         )
         line_bot_api.reply_message(event.reply_token,location_message)
     elif re.match('裝置位置2',message):
         location_message = LocationSendMessage(
             title='裝置2目前的所在位置',
-            address='總統府',
-            latitude=25.040213810016002,
-            longitude=121.51238385108306
+            latitude=result102,
+            longitude=result112
         )
         line_bot_api.reply_message(event.reply_token,location_message)
     elif re.match('裝置位置3',message):
         location_message = LocationSendMessage(
             title='裝置3目前的所在位置',
-            address='總統府',
-            latitude=25.040213810016002,
-            longitude=121.51238385108306
+            latitude=result103,
+            longitude=result113
         )
         line_bot_api.reply_message(event.reply_token,location_message)
     elif re.match('裝置位置4',message):
         location_message = LocationSendMessage(
             title='裝置4目前的所在位置',
             address='總統府',
-            latitude=25.040213810016002,
-            longitude=121.51238385108306
+            latitude=result104,
+            longitude=result114
         )
         line_bot_api.reply_message(event.reply_token,location_message)
     elif re.match('裝置位置5',message):
         location_message = LocationSendMessage(
             title='裝置5目前的所在位置',
-            address='總統府',
-            latitude=float(result10),
-            longitude=float(result12)
+            latitude=float(result105),
+            longitude=float(result115)
         )
         line_bot_api.reply_message(event.reply_token,location_message)
     elif re.match('環境影像1',message):
