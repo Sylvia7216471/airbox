@@ -445,7 +445,7 @@ def handle_message(event):
                              ),
                              URITemplateAction(
                                label='動態影像1',
-                               uri='http://192.168.0.24:9601/stream'
+                               uri='http://192.168.0.8:9601/stream'
                              )
                         ]
                     ),
