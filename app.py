@@ -549,6 +549,7 @@ def handle_message(event):
     elif re.match('裝置位置1',message):
         location_message = LocationSendMessage(
             title='裝置1目前的所在位置',
+            address='Over there',
             latitude=result101,
             longitude=result111
         )
@@ -556,6 +557,7 @@ def handle_message(event):
     elif re.match('裝置位置2',message):
         location_message = LocationSendMessage(
             title='裝置2目前的所在位置',
+            address='Over there',
             latitude=result102,
             longitude=result112
         )
@@ -563,6 +565,7 @@ def handle_message(event):
     elif re.match('裝置位置3',message):
         location_message = LocationSendMessage(
             title='裝置3目前的所在位置',
+            address='Over there',
             latitude=result103,
             longitude=result113
         )
@@ -570,7 +573,7 @@ def handle_message(event):
     elif re.match('裝置位置4',message):
         location_message = LocationSendMessage(
             title='裝置4目前的所在位置',
-            address='總統府',
+            address='Over there',
             latitude=result104,
             longitude=result114
         )
@@ -578,8 +581,9 @@ def handle_message(event):
     elif re.match('裝置位置5',message):
         location_message = LocationSendMessage(
             title='裝置5目前的所在位置',
-            latitude=float(result105),
-            longitude=float(result115)
+            address='Over there',
+            latitude=result105,
+            longitude=result115
         )
         line_bot_api.reply_message(event.reply_token,location_message)
     elif re.match('環境影像1',message):
