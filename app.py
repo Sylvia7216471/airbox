@@ -81,13 +81,13 @@ def aqi4(num):
     return aqi5
 
 def aqi6(num):
-    if(num <=50): aqi6 ='💚'
-    elif(num > 50 and num <= 100):aqi6 ='💛'
-    elif(num >100 and num <= 254):aqi6='🧡'
-    elif(num >254 and num <= 354):aqi6 ='❤️'
-    elif(num >354 and num <= 424 ):aqi6 ='💜'
-    elif(num >424):aqi6 ='🤎'    
-    return aqi5
+    if(num <=50): aqi7 ='💚'
+    elif(num > 50 and num <= 100):aqi7 ='💛'
+    elif(num >100 and num <= 254):aqi7='🧡'
+    elif(num >254 and num <= 354):aqi7 ='❤️'
+    elif(num >354 and num <= 424 ):aqi7 ='💜'
+    elif(num >424):aqi7 ='🤎'    
+    return aqi7
 
 
 cursor1 = db.cursor()
