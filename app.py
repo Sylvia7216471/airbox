@@ -431,7 +431,7 @@ def handle_message(event):
             template=CarouselTemplate(
                 columns=[
                     CarouselColumn(
-                        thumbnail_image_url='https://cdn-icons-png.flaticon.com/512/1875/1875043.png',
+                        thumbnail_image_url='https://cdn-icons-png.flaticon.com/512/7778/7778743.png',
                         title='裝置1',
                         text='請點選你想查看的資訊',
                         actions=[
@@ -450,7 +450,7 @@ def handle_message(event):
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url='https://cdn-icons-png.flaticon.com/512/1874/1874965.png',
+                        thumbnail_image_url='https://cdn-icons-png.flaticon.com/512/1408/1408470.png',
                         title='裝置2',
                         text='請點選你想查看的資訊',
                         actions=[
@@ -469,7 +469,7 @@ def handle_message(event):
                         ]
                     ),
                      CarouselColumn(
-                        thumbnail_image_url='https://cdn-icons-png.flaticon.com/512/1875/1875078.png',
+                        thumbnail_image_url='https://cdn-icons-png.flaticon.com/512/6028/6028812.png',
                         title='裝置3',
                         text='請點選你想查看的資訊',
                         actions=[
@@ -488,7 +488,7 @@ def handle_message(event):
                         ]
                     ),
                      CarouselColumn(
-                        thumbnail_image_url='https://cdn-icons-png.flaticon.com/512/1874/1874996.png',
+                        thumbnail_image_url='https://cdn-icons-png.flaticon.com/512/1408/1408429.png',
                         title='裝置4',
                         text='請點選你想查看的資訊',
                         actions=[
@@ -507,7 +507,7 @@ def handle_message(event):
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url='https://cdn-icons-png.flaticon.com/512/1875/1875006.png',
+                        thumbnail_image_url='https://cdn-icons-png.flaticon.com/512/7057/7057928.png',
                         title='裝置5',
                         text='請點選你想查看的資訊',
                         actions=[
