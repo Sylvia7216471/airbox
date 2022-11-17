@@ -609,7 +609,7 @@ def handle_message(event):
          buttons_template_message = TemplateSendMessage(
          alt_text='這個看不到',
          template=ButtonsTemplate(
-             thumbnail_image_url='https://cdn-icons-png.flaticon.com/512/1875/1875043.png',
+             thumbnail_image_url='https://cdn-icons-png.flaticon.com/512/7778/7778743.png',
              title='裝置一的歷史資料',
              text='請選擇你想看哪筆資料',
              actions=[
@@ -633,7 +633,7 @@ def handle_message(event):
          buttons_template_message = TemplateSendMessage(
          alt_text='這個看不到',
          template=ButtonsTemplate(
-             thumbnail_image_url='https://cdn-icons-png.flaticon.com/512/1874/1874965.png',
+             thumbnail_image_url='https://cdn-icons-png.flaticon.com/512/1408/1408470.png',
              title='裝置二的歷史資料',
              text='請選擇你想看哪筆資料',
              actions=[
@@ -657,7 +657,7 @@ def handle_message(event):
          buttons_template_message = TemplateSendMessage(
          alt_text='這個看不到',
          template=ButtonsTemplate(
-             thumbnail_image_url='https://cdn-icons-png.flaticon.com/512/1875/1875078.png',
+             thumbnail_image_url='https://cdn-icons-png.flaticon.com/512/6028/6028812.png',
              title='裝置三的歷史資料',
              text='請選擇你想看哪筆資料',
              actions=[
@@ -681,7 +681,7 @@ def handle_message(event):
          buttons_template_message = TemplateSendMessage(
          alt_text='這個看不到',
          template=ButtonsTemplate(
-             thumbnail_image_url='https://cdn-icons-png.flaticon.com/512/1874/1874996.png',
+             thumbnail_image_url='https://cdn-icons-png.flaticon.com/512/1408/1408429.png',
              title='裝置四的歷史資料',
              text='請選擇你想看哪筆資料',
              actions=[
@@ -705,7 +705,7 @@ def handle_message(event):
          buttons_template_message = TemplateSendMessage(
          alt_text='這個看不到',
          template=ButtonsTemplate(
-             thumbnail_image_url='https://cdn-icons-png.flaticon.com/512/1875/1875006.png',
+             thumbnail_image_url='https://cdn-icons-png.flaticon.com/512/7057/7057928.png',
              title='裝置五的歷史資料',
              text='請選擇你想看哪筆資料',
              actions=[
