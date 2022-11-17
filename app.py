@@ -795,7 +795,12 @@ def handle_message(event):
     elif re.match('裝置五前第三筆資料',message):
           line_bot_api.push_message(yourID, 
                          TextSendMessage(text='更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(third15)+'\n'+'溫度: '+str(third25)+'˚C'+'\n'+'濕度: '+str(third35)+'RH'+'\n'+'PM1: '+str(third45)+'μg/m3'+'\n'+'PM25: '+str(third55)+'μg/m3'+'\n'+'PM10: '+str(third65)+'μg/m3'+'\n'+'MQ3: '+str(third75)+'μg/L'+'\n'+'MQ10: '+str(third85)+'μg/L'+'\n'+'MQ135: '+str(third95)+'μg/L'))
-        
+    elif re.match('空氣品質對照表',message):
+        image_message = ImageSendMessage(
+            original_content_url='https://ibb.co/ySqQwnZ',
+        )
+        line_bot_api.reply_message(event.reply_token, image_message)
+   
 #主程式
 import os
 if __name__ == "__main__":
