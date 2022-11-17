@@ -588,8 +588,8 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token,location_message)
     elif re.match('空氣品質對照表',message):
         image_message = ImageSendMessage(
-        original_content_url='https://ibb.co/ySqQwnZ',
-        preview_image_url='https://ibb.co/ySqQwnZ'
+        original_content_url='https://i.imgur.com/A1h21Bi.jpg',
+        preview_image_url='https://i.imgur.com/A1h21Bi.jpg'
         )
         line_bot_api.reply_message(event.reply_token, image_message)
 ##########################################################歷史資料########################################################################
