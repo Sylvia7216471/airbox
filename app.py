@@ -105,7 +105,7 @@ result91=result1[9]
 result101=result1[10]
 result111=result1[11]
 
-point11=aqi(result1[4])
+point11=(result1[4])
 point12=aqi2(result1[5])
 point13=aqi2(result1[6])
 point14=aqi(result1[7])
@@ -127,7 +127,7 @@ result92=result2[9]
 result102=result2[10]
 result112=result2[11]
 
-point21=aqi(result2[4])
+point21=(result2[4])
 point22=aqi2(result2[5])
 point23=aqi2(result2[6])
 point24=aqi(result2[7])
@@ -150,7 +150,7 @@ result93=result3[9]
 result103=result3[10]
 result113=result3[11]
 
-point31=aqi(result3[4])
+point31=(result3[4])
 point32=aqi2(result3[5])
 point33=aqi2(result3[6])
 point34=aqi(result3[7])
@@ -172,7 +172,7 @@ result94=result4[9]
 result104=result4[10]
 result114=result4[11]
 
-point41=aqi(result4[4])
+point41=(result4[4])
 point42=aqi2(result4[5])
 point43=aqi2(result4[6])
 point44=aqi(result4[7])
@@ -194,7 +194,7 @@ result95=result5[9]
 result105=result5[10]
 result115=result5[11]
 
-point51=aqi(result5[4])
+point51=(result5[4])
 point52=aqi2(result5[5])
 point53=aqi2(result5[6])
 point54=aqi(result5[7])
@@ -558,19 +558,19 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, carousel_template_message)
     elif re.match('環境資料1',message):
         line_bot_api.push_message(yourID, 
-                         TextSendMessage(text='環境資料1'+'\n'+'_________________________'+'\n'+'更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(result11)+'\n'+'溫度: '+str(result21)+'˚C'+'\n'+'濕度: '+str(result31)+'RH'+'\n'+'PM1: '+str(result41)+'μg/m3                       '+str(point11)+'\n'+'MQ3: '+str(result51)+'μg/L                         '+str(point12)+'\n'+'MQ7: '+str(result61)+'μg/L                         '+str(point13)+'\n'+'MQ135: '+str(result71)+'μg/L                     '+str(point14)+'\n'+'PM25: '+str(result81)+'μg/m3                    '+str(point15)+'\n'+'PM10: '+str(result91)+'μg/m3                    '+str(point16))) 
+                         TextSendMessage(text='環境資料1'+'\n'+'_________________________'+'\n'+'更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(result11)+'\n'+'溫度: '+str(result21)+'˚C'+'\n'+'濕度: '+str(result31)+'RH'+'\n'+'PM1: '+str(result41)+'μg/m3'+str(point11)+'\n'+'MQ3: '+str(result51)+'μg/L'+str(point12)+'\n'+'MQ7: '+str(result61)+'μg/L'+str(point13)+'\n'+'MQ135: '+str(result71)+'μg/L'+str(point14)+'\n'+'PM25: '+str(result81)+'μg/m3'+str(point15)+'\n'+'PM10: '+str(result91)+'μg/m3'+str(point16))) 
     elif re.match('環境資料2',message):
         line_bot_api.push_message(yourID, 
-                         TextSendMessage(text='環境資料2'+'\n'+'_________________________'+'\n'+'更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(result12)+'\n'+'溫度: '+str(result22)+'˚C'+'\n'+'濕度: '+str(result32)+'RH'+'\n'+'PM1: '+str(result42)+'μg/m3                       '+str(point21)+'\n'+'MQ3: '+str(result52)+'μg/L                         '+str(point22)+'\n'+'MQ7: '+str(result62)+'μg/L                         '+str(point23)+'\n'+'MQ135: '+str(result72)+'μg/L                     '+str(point24)+'\n'+'PM25: '+str(result82)+'μg/m3                    '+str(point25)+'\n'+'PM10: '+str(result92)+'μg/m3                    '+str(point26)))
+                         TextSendMessage(text='環境資料2'+'\n'+'_________________________'+'\n'+'更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(result12)+'\n'+'溫度: '+str(result22)+'˚C'+'\n'+'濕度: '+str(result32)+'RH'+'\n'+'PM1: '+str(result42)+'μg/m3'+str(point21)+'\n'+'MQ3: '+str(result52)+'μg/L'+str(point22)+'\n'+'MQ7: '+str(result62)+'μg/L'+str(point23)+'\n'+'MQ135: '+str(result72)+'μg/L'+str(point24)+'\n'+'PM25: '+str(result82)+'μg/m3'+str(point25)+'\n'+'PM10: '+str(result92)+'μg/m3'+str(point26)))
     elif re.match('環境資料3',message):
           line_bot_api.push_message(yourID, 
-                         TextSendMessage(text='環境資料3'+'\n'+'_________________________'+'\n'+'更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(result13)+'\n'+'溫度: '+str(result23)+'˚C'+'\n'+'濕度: '+str(result33)+'RH'+'\n'+'PM1: '+str(result43)+'μg/m3                       '+str(point31)+'\n'+'MQ3: '+str(result53)+'μg/L                         '+str(point32)+'\n'+'MQ7: '+str(result63)+'μg/L                         '+str(point33)+'\n'+'MQ135: '+str(result73)+'μg/L                     '+str(point34)+'\n'+'PM25: '+str(result83)+'μg/m3                    '+str(point35)+'\n'+'PM10: '+str(result93)+'μg/m3                    '+str(point36)))
+                         TextSendMessage(text='環境資料3'+'\n'+'_________________________'+'\n'+'更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(result13)+'\n'+'溫度: '+str(result23)+'˚C'+'\n'+'濕度: '+str(result33)+'RH'+'\n'+'PM1: '+str(result43)+'μg/m3'+str(point31)+'\n'+'MQ3: '+str(result53)+'μg/L'+str(point32)+'\n'+'MQ7: '+str(result63)+'μg/L'+str(point33)+'\n'+'MQ135: '+str(result73)+'μg/L'+str(point34)+'\n'+'PM25: '+str(result83)+'μg/m3'+str(point35)+'\n'+'PM10: '+str(result93)+'μg/m3'+str(point36)))
     elif re.match('環境資料4',message):
         line_bot_api.push_message(yourID, 
-                         TextSendMessage(text='環境資料4'+'\n'+'_________________________'+'\n'+'更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(result14)+'\n'+'溫度: '+str(result24)+'˚C'+'\n'+'濕度: '+str(result34)+'RH'+'\n'+'PM1: '+str(result44)+'μg/m3                       '+str(point41)+'\n'+'MQ3: '+str(result54)+'μg/L                         '+str(point42)+'\n'+'MQ7: '+str(result64)+'μg/L                         '+str(point43)+'\n'+'MQ135: '+str(result74)+'μg/L                     '+str(point44)+'\n'+'PM25: '+str(result84)+'μg/m3                    '+str(point45)+'\n'+'PM10: '+str(result94)+'μg/m3                    '+str(point46)))
+                         TextSendMessage(text='環境資料4'+'\n'+'_________________________'+'\n'+'更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(result14)+'\n'+'溫度: '+str(result24)+'˚C'+'\n'+'濕度: '+str(result34)+'RH'+'\n'+'PM1: '+str(result44)+'μg/m3'+str(point41)+'\n'+'MQ3: '+str(result54)+'μg/L'+str(point42)+'\n'+'MQ7: '+str(result64)+'μg/L'+str(point43)+'\n'+'MQ135: '+str(result74)+'μg/L'+str(point44)+'\n'+'PM25: '+str(result84)+'μg/m3'+str(point45)+'\n'+'PM10: '+str(result94)+'μg/m3'+str(point46)))
     elif re.match('環境資料5',message):
         line_bot_api.push_message(yourID, 
-                         TextSendMessage(text='環境資料5'+'\n'+'_________________________'+'\n'+'更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(result15)+'\n'+'溫度: '+str(result25)+'˚C'+'\n'+'濕度: '+str(result35)+'RH'+'\n'+'PM1: '+str(result45)+'μg/m3                       '+str(point51)+'\n'+'MQ3: '+str(result55)+'μg/L                         '+str(point52)+'\n'+'MQ7: '+str(result65)+'μg/L                         '+str(point53)+'\n'+'MQ135: '+str(result75)+'μg/L                     '+str(point54)+'\n'+'PM25: '+str(result85)+'μg/m3                    '+str(point55)+'\n'+'PM10: '+str(result95)+'μg/m3                    '+str(point56)))
+                         TextSendMessage(text='環境資料5'+'\n'+'_________________________'+'\n'+'更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(result15)+'\n'+'溫度: '+str(result25)+'˚C'+'\n'+'濕度: '+str(result35)+'RH'+'\n'+'PM1: '+str(result45)+'μg/m3'+str(point51)+'\n'+'MQ3: '+str(result55)+'μg/L'+str(point52)+'\n'+'MQ7: '+str(result65)+'μg/L'+str(point53)+'\n'+'MQ135: '+str(result75)+'μg/L'+str(point54)+'\n'+'PM25: '+str(result85)+'μg/m3'+str(point55)+'\n'+'PM10: '+str(result95)+'μg/m3'+str(point56)))
      
     elif re.match('裝置位置1',message):
         location_message = LocationSendMessage(
