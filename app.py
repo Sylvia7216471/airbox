@@ -586,34 +586,10 @@ def handle_message(event):
             longitude=result115
         )
         line_bot_api.reply_message(event.reply_token,location_message)
-    elif re.match('環境影像1',message):
+    elif re.match('空氣品質對照表',message):
         image_message = ImageSendMessage(
-        original_content_url='https://media.istockphoto.com/illustrations/tapir-illustration-id1128835465?k=20&m=1128835465&s=612x612&w=0&h=o5rGp2t8zFGLj_BrSqWes-d1DqeWtM3Z-_rQU73jfzA=',
-        preview_image_url='https://media.istockphoto.com/illustrations/tapir-illustration-id1128835465?k=20&m=1128835465&s=612x612&w=0&h=o5rGp2t8zFGLj_BrSqWes-d1DqeWtM3Z-_rQU73jfzA='
-        )
-        line_bot_api.reply_message(event.reply_token, image_message)
-    elif re.match('環境影像2',message):
-        image_message = ImageSendMessage(
-        original_content_url='https://media.istockphoto.com/illustrations/tapir-illustration-id1128835465?k=20&m=1128835465&s=612x612&w=0&h=o5rGp2t8zFGLj_BrSqWes-d1DqeWtM3Z-_rQU73jfzA=',
-        preview_image_url='https://media.istockphoto.com/illustrations/tapir-illustration-id1128835465?k=20&m=1128835465&s=612x612&w=0&h=o5rGp2t8zFGLj_BrSqWes-d1DqeWtM3Z-_rQU73jfzA='
-        )
-        line_bot_api.reply_message(event.reply_token, image_message)
-    elif re.match('環境影像3',message):
-        image_message = ImageSendMessage(
-        original_content_url='https://media.istockphoto.com/illustrations/tapir-illustration-id1128835465?k=20&m=1128835465&s=612x612&w=0&h=o5rGp2t8zFGLj_BrSqWes-d1DqeWtM3Z-_rQU73jfzA=',
-        preview_image_url='https://media.istockphoto.com/illustrations/tapir-illustration-id1128835465?k=20&m=1128835465&s=612x612&w=0&h=o5rGp2t8zFGLj_BrSqWes-d1DqeWtM3Z-_rQU73jfzA='
-        )
-        line_bot_api.reply_message(event.reply_token, image_message)
-    elif re.match('環境影像4',message):
-        image_message = ImageSendMessage(
-        original_content_url='https://media.istockphoto.com/illustrations/tapir-illustration-id1128835465?k=20&m=1128835465&s=612x612&w=0&h=o5rGp2t8zFGLj_BrSqWes-d1DqeWtM3Z-_rQU73jfzA=',
-        preview_image_url='https://media.istockphoto.com/illustrations/tapir-illustration-id1128835465?k=20&m=1128835465&s=612x612&w=0&h=o5rGp2t8zFGLj_BrSqWes-d1DqeWtM3Z-_rQU73jfzA='
-        )
-        line_bot_api.reply_message(event.reply_token, image_message)
-    elif re.match('環境影像5',message):
-        image_message = ImageSendMessage(
-        original_content_url='https://media.istockphoto.com/illustrations/tapir-illustration-id1128835465?k=20&m=1128835465&s=612x612&w=0&h=o5rGp2t8zFGLj_BrSqWes-d1DqeWtM3Z-_rQU73jfzA=',
-        preview_image_url='https://media.istockphoto.com/illustrations/tapir-illustration-id1128835465?k=20&m=1128835465&s=612x612&w=0&h=o5rGp2t8zFGLj_BrSqWes-d1DqeWtM3Z-_rQU73jfzA='
+        original_content_url='https://ibb.co/ySqQwnZ',
+        preview_image_url='https://ibb.co/ySqQwnZ'
         )
         line_bot_api.reply_message(event.reply_token, image_message)
 ##########################################################歷史資料########################################################################
@@ -795,11 +771,7 @@ def handle_message(event):
     elif re.match('裝置五前第三筆資料',message):
           line_bot_api.push_message(yourID, 
                          TextSendMessage(text='更新時間:'+str(datetime_format)+'\n'+'測量時間:'+str(third15)+'\n'+'溫度: '+str(third25)+'˚C'+'\n'+'濕度: '+str(third35)+'RH'+'\n'+'PM1: '+str(third45)+'μg/m3'+'\n'+'PM25: '+str(third55)+'μg/m3'+'\n'+'PM10: '+str(third65)+'μg/m3'+'\n'+'MQ3: '+str(third75)+'μg/L'+'\n'+'MQ10: '+str(third85)+'μg/L'+'\n'+'MQ135: '+str(third95)+'μg/L'))
-    elif re.match('空氣品質對照表',message):
-        image_message = ImageSendMessage(
-            original_content_url='https://ibb.co/ySqQwnZ',
-        )
-        line_bot_api.reply_message(event.reply_token, image_message)
+   
    
 #主程式
 import os
