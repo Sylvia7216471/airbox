@@ -57,36 +57,36 @@ def callback():
 db = pymysql.connect(host='us-cdbr-east-05.cleardb.net', port='', user='b27ce87b980a11', passwd='167961db', database = "heroku_5ce6e6298fde0f2")
 
 def aqi(num):
-    if(num <=50): aqi1 ='💚'
-    elif(num > 50 and num <= 100):aqi1 ='💛'
-    elif(num >100 and num <= 150):aqi1='🧡'
-    elif(num >150 and num <= 200):aqi1 ='❤️'
-    elif(num >200 and num <= 300 ):aqi1 ='💜'
-    elif(num >300):aqi1 ='🤎'    
+    if(num <=50): aqi1 ='🟢'
+    elif(num > 50 and num <= 100):aqi1 ='🟡'
+    elif(num >100 and num <= 150):aqi1='🟠'
+    elif(num >150 and num <= 200):aqi1 ='🔴'
+    elif(num >200 and num <= 300 ):aqi1 ='🟣'
+    elif(num >300):aqi1 ='🟤'    
     return aqi1
 
 def aqi2(num):
-    if(num <=120): aqi3 ='💚'
-    elif(num >120 and num <= 400):aqi3 ='❤️'
-    elif(num >400 ):aqi3 ='💜'
+    if(num <=120): aqi3 ='🟢'
+    elif(num >120 and num <= 400):aqi3 ='🔴'
+    elif(num >400 ):aqi3 ='🟣'
     return aqi3
 
 def aqi4(num):
-    if(num <=15.4): aqi5 ='💚'
-    elif(num > 15.4 and num <= 35.4):aqi5 ='💛'
-    elif(num >35.4 and num <= 54.4):aqi5='🧡'
-    elif(num >54.4 and num <= 150.4):aqi5 ='❤️'
-    elif(num >150.4 and num <= 250.4 ):aqi5 ='💜'
-    elif(num >250.4):aqi5 ='🤎'    
+    if(num <=15.4): aqi5 ='🟢'
+    elif(num > 15.4 and num <= 35.4):aqi5 ='🟡'
+    elif(num >35.4 and num <= 54.4):aqi5='🟠'
+    elif(num >54.4 and num <= 150.4):aqi5 ='🔴'
+    elif(num >150.4 and num <= 250.4 ):aqi5 ='🟣'
+    elif(num >250.4):aqi5 ='🟤'    
     return aqi5
 
 def aqi6(num):
-    if(num <=50): aqi7 ='💚'
-    elif(num > 50 and num <= 100):aqi7 ='💛'
-    elif(num >100 and num <= 254):aqi7='🧡'
-    elif(num >254 and num <= 354):aqi7 ='❤️'
-    elif(num >354 and num <= 424 ):aqi7 ='💜'
-    elif(num >424):aqi7 ='🤎'    
+    if(num <=50): aqi7 ='🟢'
+    elif(num > 50 and num <= 100):aqi7 ='🟡'
+    elif(num >100 and num <= 254):aqi7='🟠'
+    elif(num >254 and num <= 354):aqi7 ='🔴'
+    elif(num >354 and num <= 424 ):aqi7 ='🟣'
+    elif(num >424):aqi7 ='🟤'    
     return aqi7
 
 
